@@ -5,8 +5,8 @@
     "default_locale": "it",
     "version": "5.2.1.0",
     "app": {
-        "launch": {
-            "local_path": "toolrun.html"
+        "background": {
+            "scripts": ["main.js"]
         }
     },
     "icons": {
@@ -14,13 +14,5 @@
         "24": "Counter_24.png",
         "48": "Counter_48.png",
         "128": "Counter_128.png"
-    },
-    "browser_action": {
-        "default_title": "Strumenti della corsa",
-        "default_icon": "Counter_48.png"
-    },
-    "permissions": [
-        "unlimited_storage",
-        "notifications"
-    ]
+    }
 }
