@@ -3,7 +3,7 @@
     "manifest_version": 2,
     "description": "Utilities for the keen runner",
     "default_locale": "it",
-    "version": "5.2.1.0",
+    "version": "5.2.2.0",
     "app": {
         "background": {
             "scripts": ["main.js"]
