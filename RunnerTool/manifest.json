@@ -1,0 +1,19 @@
+{
+  "name": "Strumenti per la corsa",
+  "manifest_version": 2,
+  "description": "Alcue funzioni utili per il runner",
+  "version": "5.2.1.0",
+  "app": {
+    "launch": {
+      "local_path": "toolrun.html"
+    }
+  },
+  "icons": {
+    "24": "Counter_24.png",
+    "128": "Counter_128.png"
+  },
+  "permissions": [
+    "unlimited_storage",
+    "notifications"
+  ]
+}

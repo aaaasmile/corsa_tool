@@ -1,2 +1,2 @@
 # corsa_tool
-Simple runner pace calculations.
+Simple runner pace tool.
