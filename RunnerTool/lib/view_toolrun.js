@@ -3,15 +3,6 @@ var run_view = {};
 
 $(document).ready(function () {
     run_view.set_deafult_values_inctrl();
-    $("#btSaveDetPass").button({
-        text: false,
-        icons: {
-            primary: "ui-icon-disk"
-        }
-    }).click(function () {
-        run_view.teoreal_save_data();
-    });
-
     $("#btNewDetPass").button({
         text: false,
         icons: {
@@ -28,15 +19,6 @@ $(document).ready(function () {
         }
     }).click(function () {
         run_view.teoreal_show_edit_dlg();
-    });
-
-    $("#btLoadDetPass").button({
-        text: false,
-        icons: {
-            primary: "ui-icon-folder-open"
-        }
-    }).click(function () {
-        run_view.teoreal_loadall_data();
     });
 
     $("#btDistMara").button().click(function () {
@@ -333,8 +315,7 @@ $(document).ready(function () {
         run_view.teoreal_show_edit_dlg();
     }
 
-    var teoreal_url_service = "http://localhost:3000/realruns";
-
+    
     // eventuali errori vengono messi nella risposta nel campo error
     var teoreal_check_srv_response = function (response) {
         if (response.error !== undefined) {
@@ -360,128 +341,6 @@ $(document).ready(function () {
             auth_token: _defaults.auth_token
         }
         return service_data;
-    }
-
-
-    // siccome in jsonp non si può mettere nell'header Authentication, procediamo con un login
-    // che ritorna un token col quale segnare tutte le prossime richieste
-    run_view.teoreal_send_login = function () {
-        var user_data = JSON.stringify(
-           {
-               login: {
-                   user_name: _defaults.user_name,
-                   user_password: _defaults.user_password
-               }
-           });
-
-        $.ajax({
-            type: 'GET',
-            crossDomain: true,
-            url: teoreal_url_service,
-            data: { data: user_data },
-            contentType: "application/json; charset=utf-8",
-            dataType: "jsonp",
-            success: function (response, status) {
-                $('#result').empty();
-                if (teoreal_check_srv_response(response)) {
-                    writeln_inresult('<p> Login OK: ' + response.auth_token);
-                    _defaults.auth_token = response.auth_token;
-                }
-            },
-            error: function (req, status, msg) {
-                $('#result').empty();
-                writeln_inresult('<p> login ERROR: ' + status + ' ' + msg);
-            }
-        });
-    }
-
-    var teoreal_is_loginrequired = function () {
-        if (_defaults.auth_token.length === 0) {
-            run_view.teoreal_send_login();
-            return true;
-        }
-        return false;
-    }
-
-    run_view.teoreal_save_data = function () {
-        if (teoreal_is_loginrequired()) {
-            return;
-        }
-
-        var line_data = { title: 'mar roma', detail: '5;0:30:16,10;0:57:37' };
-        var data_ready = teoreal_build_data_tosend(line_data);
-        $.ajax({
-            type: 'GET', // Sembra che chrome non riesca a mandare il POST, ma solo GET
-            // questo è dovuto al fatto che si sta usando jsonp
-            crossDomain: true,
-            url: teoreal_url_service + "_save",
-            data: data_ready,
-            contentType: "application/json; charset=utf-8",
-            dataType: "jsonp",
-            //username: _defaults.user_login,
-            //password: _defaults.user_password, // sta roba non va con jsonp
-            // risposte errate per autenticazione vengono lette in response success
-            success: function (response, status) {
-                $('#result').empty();
-                if (teoreal_check_srv_response(response)) {
-                    writeln_inresult('<p> Save result OK: ' + response.msg);
-                }
-            },
-            error: function (req, status, msg) {
-                $('#result').empty();
-                writeln_inresult('<p> Save result ERROR: ' + status + ' ' + msg);
-            }
-        });
-    }
-
-    run_view.teoreal_loadall_data = function () {
-        if (teoreal_is_loginrequired()) {
-            return;
-        }
-        var data_ready = teoreal_build_data_tosend({});
-        $.ajax({
-            type: "GET",
-            crossDomain: true,
-            url: teoreal_url_service,
-            data: data_ready,
-            contentType: "application/json; charset=utf-8",
-            dataType: "jsonp",
-            success: function (response, status) {
-                $('#result').empty();
-                if (teoreal_check_srv_response(response)) {
-                    writeln_inresult('<p> Load result OK: ' + response.lista);
-                }
-            },
-            error: function (req, status, msg) {
-                $('#result').empty();
-                writeln_inresult('<p> Load result ERROR: ' + status + ' ' + msg);
-            }
-        });
-    }
-
-    run_view.teoreal_load_oneitem_data = function (myid) {
-        if (teoreal_is_loginrequired()) {
-            return;
-        }
-        var data_ready = teoreal_build_data_tosend({ id: myid });
-        $.ajax({
-            type: "GET",
-            crossDomain: true,
-            url: teoreal_url_service,
-            data: data_ready,
-            contentType: "application/json; charset=utf-8",
-            dataType: "jsonp",
-            success: function (response, status) {
-                $('#result').empty();
-                if (teoreal_check_srv_response(response)) {
-                    writeln_inresult('<p> Load result OK: ' + response.lista);
-                }
-            },
-            error: function (req, status, msg) {
-                $('#result').empty();
-                writeln_inresult('<p> Load result ERROR: ' + status + ' ' + msg);
-            }
-        });
     }
 
     var teoreal_add_data_from_teoCtrl = function () {
