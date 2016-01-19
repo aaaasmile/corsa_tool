@@ -1,4 +1,9 @@
-@charset "utf-8";
+﻿@charset "utf-8";
+
+/* Chrome app vertical scrollbar*/
+html, body {
+    overflow-y: visible;
+}
 
 body {
   background:#fff;
