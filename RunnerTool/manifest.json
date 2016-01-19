@@ -1,9 +1,9 @@
 {
-    "name": "Corsa Tools",
+    "name": "__MSG_appName__",
     "manifest_version": 2,
-    "description": "Utilities for the keen runner",
+    "description": "__MSG_appDesc__",
     "default_locale": "it",
-    "version": "5.2.2.0",
+    "version": "5.2.3.0",
     "app": {
         "background": {
             "scripts": [ "main.js" ]

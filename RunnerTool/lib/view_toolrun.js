@@ -21,7 +21,9 @@ $(document).ready(function () {
         run_view.teoreal_show_edit_dlg();
     });
 
-    $("#btDistMara").button().click(function () {
+    $("#btDistMara")
+        .html(run_view.getTranslMessage('btDistMara', 'Boooh'))
+        .button().click(function () {
         run_view.set_distance(42.2);
     });
     $("#btDistHM").button().click(function () {
@@ -498,6 +500,15 @@ $(document).ready(function () {
         _defaults.distance = dist;
         run_view.set_deafult_values_inctrl();
 
+    }
+
+    run_view.getTranslMessage = function (label, msg_default) {
+        if (chrome.i18n !== undefined) {
+            var message = chrome.i18n.getMessage(label);
+            console.log("Message i18: ", message);
+            return message;
+        }
+        return msg_default;
     }
 
     // funzioni private

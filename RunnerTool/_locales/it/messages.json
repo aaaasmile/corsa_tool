@@ -1,8 +1,12 @@
-{
-  "chrome_extension_name": {
-    "message": "Corsa Tools"
-  },
-  "chrome_extension_description": {
-    "message": "Strumenti utili per il bravo corridore"
-  }
+﻿{
+    "appName": {
+        "message": "Corsa - strumenti"
+    },
+    "appDesc": {
+        "message": "Strumenti utili per il bravo corridore.",
+        "description": "Qualche funzione utile per calcolare velocità e tempi di percorrenza per il maratoneta."
+    },
+    "btDistMara": {
+        "message": "Maratona"
+    }
 }
