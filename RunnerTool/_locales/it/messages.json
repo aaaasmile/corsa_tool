@@ -91,7 +91,7 @@
         "message": "velocità al Km (es. \"04:36\") in mm:ss"
     },
     "msgRangeVelOpt": {
-        "message": "Range velocità opzionale in Km/h (es. \"10,10.2,11.3,11.5,12.9\")"
+        "message": "Serie di velocità in Km/h (es. \"10,10.2,11.3,11.5,12.9\")"
     },
     "msgVelKmh12": {
         "message": "Velocità al Km (es. \"12\") in Km/h"

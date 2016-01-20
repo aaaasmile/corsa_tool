@@ -45,3 +45,7 @@ body {
 #cmdList div{
     margin: 8px 0 2px 0;
 }
+
+div#result {
+    background-color: aliceblue;
+}

@@ -23,6 +23,7 @@ $(document).ready(function () {
         run_view.teoreal_show_edit_dlg();
     });
 
+    // toolbar
     $("#btDistMara")
         .html(run_view.getTranslMessage('btDistMara'))
         .button().click(function () {
@@ -54,10 +55,12 @@ $(document).ready(function () {
             run_view.clear_result();
         });
 
+    // buttons
     $("#btCalcDetTeoreal")
         .html(run_view.getTranslMessage('btCalcDetTeoreal'))
         .button().click(function () {
             run_view.confronta_tabella();
+            run_view.set_result_to('liCalcDetTeoreal');
         });
 
     $("#btCalcMean")
@@ -70,41 +73,49 @@ $(document).ready(function () {
         .html(run_view.getTranslMessage('btFinalTime'))
         .button().click(function () {
             run_view.tempo_finale();
+            run_view.set_result_to('liFinalTime');
         });
     $("#btCalcTableRangeVel")
         .html(run_view.getTranslMessage('btCalcTableRangeVel'))
         .button().click(function () {
             run_view.calculate_table_range_vel();
+            run_view.set_result_to('liCalcTableRangeVel');
         });
     $("#btMinutiCorsi")
         .html(run_view.getTranslMessage('btMinutiCorsi'))
         .button().click(function () {
             run_view.minuti_corsi();
+            run_view.set_result_to('liMinutiCorsi');
         });
     $("#btTablePerDist")
         .html(run_view.getTranslMessage('btTablePerDist'))
         .button().click(function () {
             run_view.tabella_per_dist();
+            run_view.set_result_to('liTablePerDist');
         });
     $("#btPercPulsMax")
         .html(run_view.getTranslMessage('btPercPulsMax'))
         .button().click(function () {
             run_view.freq_puls_table();
+            run_view.set_result_to('liPercPulsMax');
         });
     $("#btEqTempi")
         .html(run_view.getTranslMessage('btEqTempi'))
         .button().click(function () {
             run_view.equilval_tempi();
+            run_view.set_result_to('liEqTempi');
         });
     $("#btSommaTempi")
         .html(run_view.getTranslMessage('btSommaTempi'))
         .button().click(function () {
             run_view.somma_tempi();
+            run_view.set_result_to('idSommaTempi');
         });
     $("#btSottrTempi")
         .html(run_view.getTranslMessage('btSottrTempi'))
         .button().click(function () {
             run_view.sottr_tempi();
+            run_view.set_result_to('idSommaTempi');
         });
     $("#btRisSumInT1")
         .html(run_view.getTranslMessage('btRisSumInT1'))
