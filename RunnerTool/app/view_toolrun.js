@@ -113,6 +113,23 @@ $(document).ready(function () {
 
     // labels
     $("#msgDis1").html(run_view.getTranslMessage('msgDis1'));
+    $("#msgTime1").html(run_view.getTranslMessage('msgTime1'));
+    $("#msgDis2").html(run_view.getTranslMessage('msgDis2'));
+    $("#msgVelAlKm").html(run_view.getTranslMessage('msgVelAlKm'));
+    $("#msgDis3").html(run_view.getTranslMessage('msgDis3'));
+    $("#msgVelKmh12").html(run_view.getTranslMessage('msgVelKmh12'));
+    $("#msgDis4Hm").html(run_view.getTranslMessage('msgDis4Hm'));
+    $("#msgVelAlkm1").html(run_view.getTranslMessage('msgVelAlkm1'));
+    $("#msgPassoOStep").html(run_view.getTranslMessage('msgPassoOStep'));
+    $("#msgPolsoMax").html(run_view.getTranslMessage('msgPolsoMax'));
+    $("#msgDist10km").html(run_view.getTranslMessage('msgDist10km'));
+    $("#msgTempo3736").html(run_view.getTranslMessage('msgTempo3736'));
+    $("#msgDistObbiet").html(run_view.getTranslMessage('msgDistObbiet'));
+    $("#msgVelTeo").html(run_view.getTranslMessage('msgVelTeo'));
+    $("#msgPassRealiPar").html(run_view.getTranslMessage('msgPassRealiPar'));
+    $("#msgT1").html(run_view.getTranslMessage('msgT1'));
+    $("#msgT2").html(run_view.getTranslMessage('msgT2'));
+    $("#msgRangeVelOpt").html(run_view.getTranslMessage('msgRangeVelOpt'));
 
 
     $("#cmbDisteq").combobox();

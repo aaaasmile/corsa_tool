@@ -31,7 +31,7 @@
         "message": "Converti velocità"
     },
     "btMinutiCorsi": {
-        "message": "Minuti corsi"
+        "message": "Calcola tempo finale"
     },
     "btTablePerDist": {
         "message": "Tabella passaggi"
@@ -81,6 +81,9 @@
     "msgDis1": {
         "message": "Distanza (es \"5.1\") in Km"
     },
+    "msgDis2": {
+        "message": "Distanza (es \"42.2\") in Km"
+    },
     "msgTime1": {
         "message": "Tempo (es. \"00:37:36\") in hh:mm:ss"
     },
@@ -91,7 +94,7 @@
         "message": "Range velocità opzionale in Km/h (es. \"10,10.2,11.3,11.5,12.9\")"
     },
     "msgVelKmh12": {
-        "message": "Velocità (es. \"12\") in Km/h"
+        "message": "Velocità al Km (es. \"12\") in Km/h"
     },
     "msgDis4Hm": {
         "message": "Distanza (es. \"21.1\") in Km"
