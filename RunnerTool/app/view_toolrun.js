@@ -384,33 +384,6 @@ $(document).ready(function () {
     }
 
 
-    // eventuali errori vengono messi nella risposta nel campo error
-    var teoreal_check_srv_response = function (response) {
-        if (response.error !== undefined) {
-            if (response.error.code === 403) {
-                // Authorized failed
-                _defaults.auth_token = '';
-            }
-            writeln_inresult('<p> Errore : ' + response.error.msg);
-            return false;
-        }
-        else {
-            return true;
-        }
-    }
-
-    // Il processo di autenficazione è semplice, viene inviato logine password via data
-    // Il server risponde con un token che va inviato in tutte le succesive richieste al webservice.
-    // Il token scade presto e non può essere modificato da un intruso. L'unica cosa che può fare è
-    // usare il token per modificare o leggere i dati dell'utente in questione nell'ambito limitato di tempo. 
-    var teoreal_build_data_tosend = function (application_req) {
-        var service_data = {
-            data: JSON.stringify(application_req),
-            auth_token: _defaults.auth_token
-        }
-        return service_data;
-    }
-
     var teoreal_add_data_from_teoCtrl = function () {
         // populate the list data parsing the string control 
         var detail_real_str = $('#txtDetailReal').val();
@@ -544,6 +517,7 @@ $(document).ready(function () {
         $('#txtVelMmSs1').val(_defaults.time_mmss);
         $('#txtVelMmSs2').val(_defaults.time_mmss);
         $('#txtVelMmSs3').val(_defaults.time_mmss);
+        $('#txtTime2').val(_defaults.time_hm);
 
         $('#txtVel').val(_defaults.velocity);
         $('#txtStep').val(_defaults.distance_step);
@@ -561,11 +535,11 @@ $(document).ready(function () {
     }
 
     var _defaults = {
-        distance: "5.3", time: "00:39:37", rangevel: '',
-        velocity: 10.2, time_mmss: "05:12", distance_step: 5.0, max_puls: 197,
+        distance: "10.0", time: "00:48:20", rangevel: '10,11,12,13,14,15', time_hm: "01:45:40",
+        velocity: 10.2, time_mmss: "05:00", distance_step: 5.0, max_puls: 197,
         dist_eq: 'HM', dist_goal: 'MT',
         detail_real: '5; 0:24:11, 10; 0:48:22, 15; 01:12:42, 20;01:37:20,  21.1;1:42:46, 26.1;2:07:12, 31.1;02:31:11, 36.1;02:56:30, 41.1;03:26:11, 42.2; 3:33:07',
-        partial_sum: '', user_name: 'luz', user_password: '123456', auth_token: ''
+        partial_sum: ''
     }
 
     run_view.set_distance = function (dist) {
