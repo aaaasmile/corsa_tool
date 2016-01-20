@@ -672,8 +672,8 @@ $(document).ready(function () {
     }
 
     var show_table_deltas = function (deltas_arr) {
-        var linehtml = "<table cellpadding=\"3\" cellspacing=\"3\">";
-        linehtml = linehtml.concat("<th>Km perc</th><th>TEO mm:ss</th><th>REALE mm:ss</th><th>Delta mm:ss</th>");
+        var linehtml = "<table id=\"tbResTeoReal\" cellpadding=\"3\" cellspacing=\"3\">";
+        linehtml = linehtml.concat("<th>Km</th><th>Teorico</th><th>REALE</th><th>Delta</th>");
         var i, line, col1, col2, col3, col4, color_style;
         for (i = 0; i < deltas_arr.length; i++) {
             line = deltas_arr[i];

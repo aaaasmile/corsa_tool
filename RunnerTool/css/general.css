@@ -6,46 +6,71 @@ html, body {
 }
 
 body {
-  background:#fff;
-  color:#000;
-  font:12px "Trebuchet MS", Arial, Helvetica, sans-serif;
-  position:relative;
+    background: #fff;
+    color: #000;
+    font: 12px "Trebuchet MS", Arial, Helvetica, sans-serif;
+    position: relative;
 }
 
 
 /* tool run specific*/
-.hover { background-color: #ccc !important; }
-
-
-
-#toolbarDetPass{padding: 10px 4px;}
-#toolbarDist{padding: 10px 4px;}
-#detTabRealData{width: 100%;}
-#detTabRealData tbody tr:nth-child(odd) {
-	background-color: white;
-}
-#detTabRealData tbody tr:nth-child(even) {
-    background-color: #EBEFF3;
+.hover {
+    background-color: #ccc !important;
 }
 
-#cmdList{
+
+
+#toolbarDetPass {
+    padding: 10px 4px;
+}
+
+#toolbarDist {
+    padding: 10px 4px;
+}
+
+#detTabRealData {
+    width: 100%;
+}
+
+    #detTabRealData tbody tr:nth-child(odd) {
+        background-color: white;
+    }
+
+    #detTabRealData tbody tr:nth-child(even) {
+        background-color: #EBEFF3;
+    }
+
+#cmdList {
     list-style-type: none;
 }
 
-#cmdList li{
-    padding: 10px 4px;
-    border-width: 1px;
-    border-style: solid;
-    border-top-color: #E8E8E8;
-    border-left: transparent;
-    border-bottom-color: transparent;
-    border-right-color: transparent;
-}
+    #cmdList li {
+        padding: 10px 4px;
+        border-width: 1px;
+        border-style: solid;
+        border-top-color: #E8E8E8;
+        border-left: transparent;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+    }
 
-#cmdList div{
-    margin: 8px 0 2px 0;
-}
+    #cmdList div {
+        margin: 8px 0 2px 0;
+    }
 
 div#result {
     background-color: aliceblue;
+}
+
+#tbResTeoReal th {
+    min-width: 70px;
+}
+
+div#msgPassRealiPar {
+    margin-bottom: 4px;
+    max-width: 400px;
+}
+
+input#txtDetailReal {
+    max-width: 400px;
 }
