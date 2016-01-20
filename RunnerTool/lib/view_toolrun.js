@@ -3,6 +3,8 @@ var run_view = {};
 
 $(document).ready(function () {
     run_view.set_deafult_values_inctrl();
+
+    // buttons click
     $("#btNewDetPass").button({
         text: false,
         icons: {
@@ -22,60 +24,95 @@ $(document).ready(function () {
     });
 
     $("#btDistMara")
-        .html(run_view.getTranslMessage('btDistMara', 'Boooh'))
+        .html(run_view.getTranslMessage('btDistMara'))
         .button().click(function () {
-        run_view.set_distance(42.2);
-    });
-    $("#btDistHM").button().click(function () {
-        run_view.set_distance(21.1);
-    });
-    $("#btDist10k").button().click(function () {
-        run_view.set_distance(10.0);
-    });
-    $("#btDist5k").button().click(function () {
-        run_view.set_distance(5.0);
-    });
-    $("#btDist1k").button().click(function () {
-        run_view.set_distance(1.0);
-    });
-    $("#btDistClearRes").button().click(function () {
-        run_view.clear_result();
-    });
+            run_view.set_distance(42.2);
+        });
+    $("#btDistHM")
+        .html(run_view.getTranslMessage('btDistHM'))
+        .button().click(function () {
+            run_view.set_distance(21.1);
+        });
+    $("#btDist10k")
+        .html(run_view.getTranslMessage('btDist10k'))
+        .button().click(function () {
+            run_view.set_distance(10.0);
+        });
+    $("#btDist5k")
+        .html(run_view.getTranslMessage('btDist5k'))
+        .button().click(function () {
+            run_view.set_distance(5.0);
+        });
+    $("#btDist1k")
+        .html(run_view.getTranslMessage('btDist1k'))
+        .button().click(function () {
+            run_view.set_distance(1.0);
+        });
+    $("#btDistClearRes")
+        .html(run_view.getTranslMessage('btDistClearRes'))
+        .button().click(function () {
+            run_view.clear_result();
+        });
 
-    $("#btCalcDetTeoreal").button().click(function () {
-        run_view.confronta_tabella();
-    });
+    $("#btCalcDetTeoreal")
+        .html(run_view.getTranslMessage('btCalcDetTeoreal'))
+        .button().click(function () {
+            run_view.confronta_tabella();
+        });
 
-    $("#btCalcMean").button().click(function () {
-        run_view.mean_vel();
-    });
-    $("#btFinalTime").button().click(function () {
-        run_view.tempo_finale();
-    });
-    $("#btCalcTableRangeVel").button().click(function () {
-        run_view.calculate_table_range_vel();
-    });
-    $("#btMinutiCorsi").button().click(function () {
-        run_view.minuti_corsi();
-    });
-    $("#btTablePerDist").button().click(function () {
-        run_view.tabella_per_dist();
-    });
-    $("#btPercPulsMax").button().click(function () {
-        run_view.freq_puls_table();
-    });
-    $("#btEqTempi").button().click(function () {
-        run_view.equilval_tempi();
-    });
-    $("#btSommaTempi").button().click(function () {
-        run_view.somma_tempi();
-    });
-    $("#btSottrTempi").button().click(function () {
-        run_view.sottr_tempi();
-    });
-    $("#btRisSumInT1").button().click(function () {
-        run_view.partial_sum_in_t1();
-    });
+    $("#btCalcMean")
+        .html(run_view.getTranslMessage('btCalcMean'))
+        .button().click(function () {
+            run_view.mean_vel();
+        });
+    $("#btFinalTime")
+        .html(run_view.getTranslMessage('btFinalTime'))
+        .button().click(function () {
+            run_view.tempo_finale();
+        });
+    $("#btCalcTableRangeVel")
+        .html(run_view.getTranslMessage('btCalcTableRangeVel'))
+        .button().click(function () {
+            run_view.calculate_table_range_vel();
+        });
+    $("#btMinutiCorsi")
+        .html(run_view.getTranslMessage('btMinutiCorsi'))
+        .button().click(function () {
+            run_view.minuti_corsi();
+        });
+    $("#btTablePerDist")
+        .html(run_view.getTranslMessage('btTablePerDist'))
+        .button().click(function () {
+            run_view.tabella_per_dist();
+        });
+    $("#btPercPulsMax")
+        .html(run_view.getTranslMessage('btPercPulsMax'))
+        .button().click(function () {
+            run_view.freq_puls_table();
+        });
+    $("#btEqTempi")
+        .html(run_view.getTranslMessage('btEqTempi'))
+        .button().click(function () {
+            run_view.equilval_tempi();
+        });
+    $("#btSommaTempi")
+        .html(run_view.getTranslMessage('btSommaTempi'))
+        .button().click(function () {
+            run_view.somma_tempi();
+        });
+    $("#btSottrTempi")
+        .html(run_view.getTranslMessage('btSottrTempi'))
+        .button().click(function () {
+            run_view.sottr_tempi();
+        });
+    $("#btRisSumInT1")
+        .html(run_view.getTranslMessage('btRisSumInT1'))
+        .button().click(function () {
+            run_view.partial_sum_in_t1();
+        });
+
+    // labels
+    $("#msgDis1").html(run_view.getTranslMessage('msgDis1'));
 
 
     $("#cmbDisteq").combobox();
@@ -317,7 +354,7 @@ $(document).ready(function () {
         run_view.teoreal_show_edit_dlg();
     }
 
-    
+
     // eventuali errori vengono messi nella risposta nel campo error
     var teoreal_check_srv_response = function (response) {
         if (response.error !== undefined) {
@@ -407,7 +444,7 @@ $(document).ready(function () {
     run_view.tabeff_in_ctrl = function () {
         var i, item, arr_res = [];
 
-        for (i = 0; i < _teorealDataList.size(); i++) {
+        for (i = 0; i < _teorealDataList.size() ; i++) {
             item = _teorealDataList.items[i];
             arr_res.push(item.values().dist + ";" + item.values().tempo);
         }
@@ -417,7 +454,8 @@ $(document).ready(function () {
     // aggiorna elemento editato col form della lista _teorealDataList
     run_view.tabeff_item_edit = function () {
         var item = _teorealDataList.get('id', _teorealEditItem.id);
-        item.values({ id: _teorealEditItem.id,
+        item.values({
+            id: _teorealEditItem.id,
             dist: $('#dlg_effitem_km').val(),
             tempo: $('#dlg_effitem_tempo').val()
         });
@@ -489,7 +527,8 @@ $(document).ready(function () {
 
     }
 
-    var _defaults = { distance: "5.3", time: "00:39:37", rangevel: '',
+    var _defaults = {
+        distance: "5.3", time: "00:39:37", rangevel: '',
         velocity: 10.2, time_mmss: "05:12", distance_step: 5.0, max_puls: 197,
         dist_eq: 'HM', dist_goal: 'MT',
         detail_real: '5; 0:24:11, 10; 0:48:22, 15; 01:12:42, 20;01:37:20,  21.1;1:42:46, 26.1;2:07:12, 31.1;02:31:11, 36.1;02:56:30, 41.1;03:26:11, 42.2; 3:33:07',

@@ -1,4 +1,4 @@
-{
+﻿{
     "appName": {
         "message": "Corsa Tools"
     },
@@ -6,6 +6,9 @@
         "message": "Usefull tools for the keen runner"
     },
     "btDistMara": {
-        "message": "Marathonen JA!"
+        "message": "Marathon"
+    },
+    "btDistClearRes": {
+        "message": "Ergebnis löschen"
     }
 }

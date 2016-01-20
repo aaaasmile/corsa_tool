@@ -65,7 +65,7 @@
             </table>
         </div>
     </div>
-    <h1>
+    <h1 id=msgFunUtil>
         Funzioni utili per il corridore</h1>
     <div>
         <span id="toolbarDist" class="ui-widget-header ui-corner-all">
@@ -84,74 +84,75 @@
         </span>
     </div>
     <ul>
-        <li>Distanza (es "5.1") in Km:
+        <li><div id="msgDis1">Distanza (es "5.1") in Km:</div>
             <input id="txtDist1" size="7" type="text" value="5.1" />
-            Tempo (es. "00:37:36") in hh:mm:ss:
+            <div id="msgTime1">Tempo (es. "00:37:36") in hh:mm:ss:</div>
             <input id="txtTime1" size="9" type="text" value="00:36:37" />
             <button id="btCalcMean" >
                 Calcola media</button>
         </li>
-        <li>Distanza (es "5.1") in Km:
+        <li><div id="msgDis2">Distanza (es "5.1") in Km:</div>
             <input id="txtDist2" size="7" type="text" value="5.1" />
-            velocità al Km (es. "04:36") in mm:ss:
+            <div id="msgVelAlKm">velocità al Km (es. "04:36") in mm:ss:</div>
             <input id="txtVelMmSs1" size="7" type="text" value="05:12" />
             <button id="btFinalTime" >
                 Calcola tempo finale</button>
         </li>
-        <li>Range velocità opzionale in Km/h (es. "10,10.2,11.3,11.5,12.9"):
+        <li><div id="msgRangeVelOpt">Range velocità opzionale in Km/h (es. "10,10.2,11.3,11.5,12.9"):</div>
             <input id="txtrangevel" size="17" type="text" value="" />
             <button id="btCalcTableRangeVel" >
                 Converti velocità</button>
         </li>
-        <li>Velocità (es. "12") in Km/h:
+        <li><div id="msgVelKmh12">Velocità (es. "12") in Km/h:</div>
             <input id="txtVel" size="9" type="text" value="12" />
-            Distanza (es "5.1") in Km:
+            <div id="msgDis3">Distanza (es "5.1") in Km:</div>
             <input id="txtDist3" size="7" type="text" value="5.1" />
             <button id="btMinutiCorsi">
                 Minuti corsi</button>
         </li>
-        <li>Distanza (es. "21.1") in Km:
+        <li><div id="msgDis4Hm">Distanza (es. "21.1") in Km:</div>
             <input id="txtDist4" size="7" type="text" value="24.1" />
-            velocità al Km (es. "5:27") in mm:ss:
+            <div id="msgVelAlkm1">velocità al Km (es. "5:27") in mm:ss:</div>
             <input id="txtVelMmSs2" size="7" type="text" value="05:27" />
-            passo o step (es. "5") in Km:
+            <div id="msgPassoOStep">passo o step (es. "5") in Km:</div>
             <input id="txtStep" size="7" type="text" value="5" />
             <button id="btTablePerDist" >
                 Tabella passaggi</button>
         </li>
-        <li>Polso massimo:
+        <li><div id="msgPolsoMax">Polso massimo:</div>
             <input id="txtMaxPuls" size="7" type="text" value="197" />
             <button id="btPercPulsMax">
                 Percentuali polso massimo</button>
         </li>
-        <li>Distanza (es "5km"):
+        <li><div id="msgDist10km">Distanza (es "10km"):</div>
             <select id="cmbDisteq">
                 <option value="1km">1 km</option>
                 <option value="5km">5 km</option>
                 <option value="10km">10 km</option>
-                <option value="HM" selected="selected">Mezza maratona</option>
-                <option value="MT">Maratona</option>
+                <option value="HM" selected="selected">21 km</option>
+                <option value="MT">42 km</option>
             </select>
-            Tempo (es. "00:37:36") in hh:mm:ss:
+            <div id="msgTempo3736">Tempo (es. "00:37:36") in hh:mm:ss:</div>
             <input id="txtTime2" size="9" type="text" value="00:36:37" />
-            Distanza Obbiettivo (es "MT"):
+            <div id="msgDistObbiet">Distanza Obbiettivo (es "MT"):</div>
             <select id="cmbDisteq_goal">
                 <option value="1km">1 km</option>
                 <option value="5km">5 km</option>
                 <option value="10km">10 km</option>
-                <option value="HM">Mezza maratona</option>
-                <option value="MT" selected="selected">Maratona</option>
+                <option value="HM">21 km</option>
+                <option value="MT" selected="selected">42 km</option>
             </select>
             <button id="btEqTempi">
                 Equivalenza tempi</button>
         </li>
-        <li>Velocità teorica al Km (es. "5:27") in mm:ss:
+        <li><div id="msgVelTeo">Velocità teorica al Km (es. "5:27") in mm:ss:</div>
             <input id="txtVelMmSs3" size="7" type="text" value="05:12" />
             <br />
+            <div id="msgPassRealiPar">
             Dettaglio passaggi reali con elementi separati da virgola, singolo elemento (km
             e tempo in hh:mm:ss) separato da punto e virgola.<br />
             Esempio maratona di Roma ["5;0:30:16,10;0:57:37, 15;1:24:29, 21.097;1:56:56, 25;2:17:29,
-            30;2:44:08,35;3:10:18, 40;3:38:18, 42.2;3:50:16") :<br />
+            30;2:44:08,35;3:10:18, 40;3:38:18, 42.2;3:50:16") :</div><br />
             <input id="txtDetailReal" size="107" type="text" value="" />
             <span id="toolbarDetPass" class="ui-widget-header ui-corner-all">
                 <button id="btCalcDetTeoreal">
@@ -162,9 +163,9 @@
                     Nuovi dati</button>
             </span>
         </li>
-        <li>Tempo 1:
+        <li><div id="msgT1">Tempo 1:</div>
             <input id="txtVelMmSs4" size="7" type="text" value="55:59" />
-            Tempo 2:
+            <div id="msgT2">Tempo 2:</div> 
             <input id="txtVelMmSs5" size="7" type="text" value="05:12" />
             <button id="btSommaTempi" >
                 Somma i tempi</button>

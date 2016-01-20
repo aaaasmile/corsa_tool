@@ -6,7 +6,114 @@
         "message": "Strumenti utili per il bravo corridore.",
         "description": "Qualche funzione utile per calcolare velocità e tempi di percorrenza per il maratoneta."
     },
+    "btDistHM": {
+        "message": "Mezza Maratona"
+    },
+    "btDist10k": {
+        "message": "10K"
+    },
+    "btDist5k": {
+        "message": "5K"
+    },
+    "btDist1k": {
+        "message": "1K"
+    },
+    "btDistClearRes": {
+        "message": "Cancella risultato"
+    },
+    "btCalcMean": {
+        "message": "Calcola media"
+    },
+    "btFinalTime": {
+        "message": "Calcola tempo finale"
+    },
+    "btCalcTableRangeVel": {
+        "message": "Converti velocità"
+    },
+    "btMinutiCorsi": {
+        "message": "Minuti corsi"
+    },
+    "btTablePerDist": {
+        "message": "Tabella passaggi"
+    },
+    "btPercPulsMax": {
+        "message": "Percentuali polso massimo"
+    },
+    "btEqTempi": {
+        "message": "Equivalenza tempi"
+    },
+    "btCalcDetTeoreal": {
+        "message": "Tabella teorico reale"
+    },
+    "btEditDetPass": {
+        "message": "Cambia dettagli"
+    },
+    "btNewDetPass": {
+        "message": "Nuovi dati"
+    },
+    "btSommaTempi": {
+        "message": "Somma i tempi"
+    },
+    "btSottrTempi": {
+        "message": "Sottrae i tempi"
+    },
+    "btRisSumInT1": {
+        "message": "Risultato in T1"
+    },
     "btDistMara": {
         "message": "Maratona"
+    },
+    "msgT1": {
+        "message": "Tempo 1:"
+    },
+    "msgT2": {
+        "message": "Tempo 2:"
+    },
+    "msgPassRealiPar": {
+        "message": "Dettaglio passaggi reali con elementi separati da virgola, singolo elemento (km e tempo in hh:mm:ss) separato da punto e virgola. Esempio maratona di Roma [\"5;0:30:16,10;0:57:37, 15;1:24:29, 21.097;1:56:56, 25;2:17:29,30;2:44:08,35;3:10:18, 40;3:38:18, 42.2;3:50:16\") :"
+    },
+    "msgVelTeo": {
+        "message": "Velocità teorica al Km (es. \"5:27\") in mm:ss:"
+    },
+    "msgFunUtil": {
+        "message": "Funzioni utili per il corridore"
+    },
+    "msgDis1": {
+        "message": "Distanza (es \"5.1\") in Km:"
+    },
+    "msgTime1": {
+        "message": "Tempo (es. \"00:37:36\") in hh:mm:ss:"
+    },
+    "msgVelAlKm": {
+        "message": "velocità al Km (es. \"04:36\") in mm:ss:"
+    },
+    "msgRangeVelOpt": {
+        "message": "Range velocità opzionale in Km/h (es. \"10,10.2,11.3,11.5,12.9\"):"
+    },
+    "msgVelKmh12": {
+        "message": "Velocità (es. \"12\") in Km/h:"
+    },
+    "msgDis4Hm": {
+        "message": "Distanza (es. \"21.1\") in Km:"
+    },
+    "msgVelAlkm1": {
+        "message": "velocità al Km (es. \"5:27\") in mm:ss:"
+    },
+    "msgPassoOStep": {
+        "message": "passo o step (es. \"5\") in Km:"
+    },
+    "msgPolsoMax": {
+        "message": "Polso massimo:"
+    },
+    "msgDist10km": {
+        "message": "Distanza (es \"10km\"):"
+    },
+    "msgTempo3736": {
+        "message": "Tempo (es. \"00:37:36\") in hh:mm:ss:"
+    },
+    "msgDistObbiet": {
+        "message": "Distanza Obbiettivo (es \"42 km\"):"
     }
+
 }
+
