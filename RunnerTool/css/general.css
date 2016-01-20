@@ -16,6 +16,8 @@ body {
 /* tool run specific*/
 .hover { background-color: #ccc !important; }
 
+
+
 #toolbarDetPass{padding: 10px 4px;}
 #toolbarDist{padding: 10px 4px;}
 #detTabRealData{width: 100%;}
@@ -24,4 +26,16 @@ body {
 }
 #detTabRealData tbody tr:nth-child(even) {
     background-color: #EBEFF3;
+}
+
+#cmdList{
+    list-style-type: none;
+}
+
+#cmdList li{
+    padding: 10px 4px;
+}
+
+#cmdList div{
+    margin: 8px 0 2px 0;
 }
