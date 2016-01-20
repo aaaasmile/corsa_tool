@@ -64,6 +64,7 @@ $(document).ready(function () {
         .html(run_view.getTranslMessage('btCalcMean'))
         .button().click(function () {
             run_view.mean_vel();
+            run_view.set_result_to('liCalcMean');
         });
     $("#btFinalTime")
         .html(run_view.getTranslMessage('btFinalTime'))
@@ -540,8 +541,12 @@ $(document).ready(function () {
         $('#txtDetailReal').val(_defaults.detail_real);
         var endis_val = _defaults.partial_sum.length === 0 ? true : false;
         $('#btRisSumInT1').button({ disabled: endis_val });
+    }
 
-
+    run_view.set_result_to = function (labelDest) {
+        var element = $('#result').detach();
+        var dst_selector_lbl = '#' + labelDest;
+        $(dst_selector_lbl).append(element);
     }
 
     var _defaults = {
