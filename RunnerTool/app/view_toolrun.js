@@ -584,7 +584,6 @@ $(document).ready(function () {
     }
 
     // funzioni private
-
     var check_result = function (ct) {
         if (ct.error_info().is_error) {
             writeln_inresult('<p>Errore nel calcolo: ' + ct.error_info().msg);
