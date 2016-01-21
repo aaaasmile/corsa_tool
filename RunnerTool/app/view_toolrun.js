@@ -496,7 +496,9 @@ $(document).ready(function () {
     }
 
     run_view.partial_sum_in_t1 = function () {
-        $('#txtVelMmSs4').val(_defaults.partial_sum);
+        if (_defaults.partial_sum.length > 0) {
+            $('#txtVelMmSs4').val(_defaults.partial_sum);
+        }
     }
 
     run_view.clear_result = function () {
@@ -524,8 +526,7 @@ $(document).ready(function () {
         $('#txtrangevel').val(_defaults.rangevel);
 
         $('#txtDetailReal').val(_defaults.detail_real);
-        var endis_val = _defaults.partial_sum.length === 0 ? true : false;
-        $('#btRisSumInT1').button({ disabled: endis_val });
+       
     }
 
     run_view.set_result_to = function (labelDest) {
