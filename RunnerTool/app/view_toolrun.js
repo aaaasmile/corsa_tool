@@ -153,20 +153,28 @@ $(document).ready(function () {
         height: 450,
         width: 390,
         modal: true,
-        buttons: {
-            Aggiungi: function () {
-                run_view.teoreal_add_new_item();
+        buttons: [
+            {
+                text: 'Aggiungi',
+                click: function () {
+                    run_view.teoreal_add_new_item();
+                }
             },
-            Ok: function () {
-                $(this).dialog("close");
-                run_view.tabeff_in_ctrl();
+            {
+                text: 'Ok',
+                click: function () {
+                    $(this).dialog("close");
+                    run_view.tabeff_in_ctrl();
+                }
             },
-            Cancella: function () {
-                $(this).dialog("close");
+            {
+                text: 'Cancella',
+                click: function () {
+                    $(this).dialog("close");
+                }
             }
-        },
-        close: function () {
-        }
+        ],
+        close: function () { }
     });
 
     // dialogo per cambiare un singolo record della lista tempi effettivi
@@ -175,17 +183,23 @@ $(document).ready(function () {
         height: 200,
         width: 300,
         modal: true,
-        buttons: {
-            Ok: function () {
-                $(this).dialog("close");
-                run_view.tabeff_item_edit();
+        buttons: [
+            {
+                text: 'Ok',
+                click: function () {
+                    $(this).dialog("close");
+                    run_view.tabeff_item_edit();
+                }
             },
-            Cancella: function () {
-                $(this).dialog("close");
+            {
+                text: 'Cancella',
+                click: function () {
+                    run_view.teoreal_add_new_item_cancel();
+                    $(this).dialog("close");
+                }
             }
-        },
-        close: function () {
-        }
+        ],
+        close: function () {}
     });
 
     $("#detTabRealData").delegate('td', 'mouseover mouseleave', function (e) {
@@ -374,8 +388,16 @@ $(document).ready(function () {
         var idnew = _teorealDataList.size() + _teoreal_initial_id;
         _teorealDataList.add({ id: idnew, dist: 2.0, tempo: '00:12:00' });
         _teorealEditItem = _teorealDataList.get('id', idnew).values();
+        _teorealEditItem['is_new'] = true;
 
         teoreal_open_dialog_edititem(_teorealEditItem);
+    }
+
+    // new item refesued to be edited, remove it
+    run_view.teoreal_add_new_item_cancel = function () {
+        if (_teorealEditItem['is_new'] !== undefined && _teorealEditItem['is_new']) {
+            _teorealDataList.remove("id", _teorealEditItem.id);
+        }
     }
 
     run_view.teoreal_newdataset = function () {
@@ -442,7 +464,7 @@ $(document).ready(function () {
     }
     // region teoreal toolbar END
 
-    // Scrive il contnuto della lista _teorealDataList nel controllo txtDetailReal
+    // Writes the list content into the txtDetailReal
     run_view.tabeff_in_ctrl = function () {
         var i, item, arr_res = [];
 
@@ -453,7 +475,7 @@ $(document).ready(function () {
         $('#txtDetailReal').val(arr_res.join(','));
     }
 
-    // aggiorna elemento editato col form della lista _teorealDataList
+    // Update list edited item changed using the dialogbox
     run_view.tabeff_item_edit = function () {
         var item = _teorealDataList.get('id', _teorealEditItem.id);
         item.values({
@@ -526,7 +548,7 @@ $(document).ready(function () {
         $('#txtrangevel').val(_defaults.rangevel);
 
         $('#txtDetailReal').val(_defaults.detail_real);
-       
+
     }
 
     run_view.set_result_to = function (labelDest) {
