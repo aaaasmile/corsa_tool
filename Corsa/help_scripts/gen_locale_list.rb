@@ -31,7 +31,8 @@ class Generator
     template_item = 
 <<-LIST
     "<%= name_lbl %>": {
-        "message": "<%= msg_det %>"
+        "message": "<%= msg_det %>",
+        "_orig": "<%= original_text %>",
     },
 LIST
     result = ",\n"
@@ -50,12 +51,14 @@ LIST
           name_lbl = newname
         end
       end
+      original_text = msg_det.encode('UTF-8').encode
+      p original_text
       msg_det = transalte(msg_det, lang_id) if lang_id != @source_lang_id
       
       labels[name_lbl] = {:content => msg_det, :count => 1}
       template = ERB.new(template_item)
       aString = template.result(binding)
-      result += aString + "\n"
+      result += aString
     end
     puts result
     Clipboard.set_data result
