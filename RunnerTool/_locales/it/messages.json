@@ -116,6 +116,137 @@
     },
     "msgDistObbiet": {
         "message": "Distanza Obbiettivo (es \"42 km\")"
+    },
+    "msg__aggiungi": {
+        "message": "Aggiungi"
+    },
+
+    "msg__ok": {
+        "message": "Ok"
+    },
+
+    "msg__cancella": {
+        "message": "Cancella"
+    },
+
+    "msg__calcola_vel": {
+        "message": "Calcola velocità  media per la distanza: "
+    },
+
+    "msg___km_nel_tem": {
+        "message": " Km nel tempo: "
+    },
+
+    "msg__calcola_tem": {
+        "message": "Calcola tempo finale con una distanza:  "
+    },
+
+    "msg___km_e_veloc": {
+        "message": " Km e velocità  al km:  "
+    },
+
+    "msg__mostra_tabe": {
+        "message": "Mostra tabella velocità  per il range: "
+    },
+
+    "msg__sono_acceta": {
+        "message": "Sono accetabili solo valori positivi"
+    },
+
+    "msg__minuti_cors": {
+        "message": "Minuti corsi alla velocità  "
+    },
+
+    "msg___km/h_per_u": {
+        "message": " Km/h per una distanza di "
+    },
+
+    "msg__tabella_pas": {
+        "message": "Tabella passaggi sui "
+    },
+
+    "msg___km,_con_un": {
+        "message": " Km, con uno step di "
+    },
+
+    "msg___km_ed_una_": {
+        "message": " Km ed una velocità  di: "
+    },
+
+    "msg___mm_ss_al_k": {
+        "message": " mm:ss al Km"
+    },
+
+    "msg__valore_batt": {
+        "message": "Valore battito massimo fuori soglia (50-250)"
+    },
+
+    "msg__tabella_per": {
+        "message": "Tabella percentuali polso "
+    },
+
+    "msg__calcola_equ": {
+        "message": "Calcola equivalenza di tempi per: "
+    },
+
+    "msg___con_tempo_": {
+        "message": " con tempo "
+    },
+
+    "msg___e_": {
+        "message": " e "
+    },
+
+    "msg__tabella_tor": {
+        "message": "Tabella torico-reale velocità : "
+    },
+
+    "msg___mm_ss_al_k_1": {
+        "message": " mm:ss al Km "
+    },
+
+    "msg__modifica": {
+        "message": "Modifica"
+    },
+
+    "msg__rimuovi": {
+        "message": "Rimuovi"
+    },
+
+    "msg___somma_di_": {
+        "message": " Somma di "
+    },
+
+    "msg___sottrazion": {
+        "message": " Sottrazione: "
+    },
+
+    "msg__errore_nel_": {
+        "message": "Errore nel calcolo: "
+    },
+
+    "msg__teorico": {
+        "message": "Teorico"
+    },
+
+    "msg__reale": {
+        "message": "REALE"
+    },
+
+    "msg__delta": {
+        "message": "Delta"
+    },
+
+    "msg__pulsazioni": {
+        "message": "Pulsazioni"
+    },
+
+    "msg__cambia_dett": {
+        "message": "Cambia dettagli"
+    },
+
+    "msg__nuovi_dati": {
+        "message": "Nuovi dati"
     }
 
 }

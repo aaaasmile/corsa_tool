@@ -29,6 +29,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OutsideTool", "OutsideTool"
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helpers", "Helpers", "{5F967820-ECC1-4AA7-87D6-9AA3549AACE4}"
+	ProjectSection(SolutionItems) = preProject
+		help_scripts\gen_locale_list.rb = help_scripts\gen_locale_list.rb
+		help_scripts\string_list.txt = help_scripts\string_list.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,5 +45,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5F967820-ECC1-4AA7-87D6-9AA3549AACE4} = {AA4A517C-12E2-480F-B4F1-28F3B62BE325}
 	EndGlobalSection
 EndGlobal
