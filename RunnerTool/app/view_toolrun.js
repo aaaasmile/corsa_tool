@@ -4,24 +4,35 @@ var run_view = {};
 $(document).ready(function () {
     run_view.set_deafult_values_inctrl();
 
-    // buttons click
-    $("#btNewDetPass").button({
-        text: false,
-        icons: {
-            primary: "ui-icon-document"
-        }
-    }).click(function () {
-        run_view.teoreal_newdataset();
-    });
+    // Toolbar teo/real table
+    $("#btNewDetPass")
+        .html(run_view.getTranslMessage('btNewDetPass'))
+        .button({
+            text: false,
+            icons: {
+                primary: "ui-icon-document"
+            }
+        }).click(function () {
+            run_view.teoreal_newdataset();
+        });
 
-    $("#btEditDetPass").button({
-        text: false,
-        icons: {
-            primary: "ui-icon-pencil"
-        }
-    }).click(function () {
-        run_view.teoreal_show_edit_dlg();
-    });
+    $("#btEditDetPass")
+        .html(run_view.getTranslMessage('btEditDetPass'))
+        .button({
+            text: false,
+            icons: {
+                primary: "ui-icon-pencil"
+            }
+        }).click(function () {
+            run_view.teoreal_show_edit_dlg();
+        });
+
+    $("#btCalcDetTeoreal")
+        .html(run_view.getTranslMessage('btCalcDetTeoreal'))
+        .button().click(function () {
+            run_view.confronta_tabella();
+            run_view.set_result_to('liCalcDetTeoreal');
+        });
 
     // toolbar
     $("#btDistMara")
@@ -56,12 +67,6 @@ $(document).ready(function () {
         });
 
     // buttons
-    $("#btCalcDetTeoreal")
-        .html(run_view.getTranslMessage('btCalcDetTeoreal'))
-        .button().click(function () {
-            run_view.confronta_tabella();
-            run_view.set_result_to('liCalcDetTeoreal');
-        });
 
     $("#btCalcMean")
         .html(run_view.getTranslMessage('btCalcMean'))
@@ -199,7 +204,7 @@ $(document).ready(function () {
                 }
             }
         ],
-        close: function () {}
+        close: function () { }
     });
 
     $("#detTabRealData").delegate('td', 'mouseover mouseleave', function (e) {
