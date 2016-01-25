@@ -1,4 +1,4 @@
-﻿#file: gen_locale_list.rb
+#file: gen_locale_list.rb
 
 require 'rubygems'
 require 'log4r'
