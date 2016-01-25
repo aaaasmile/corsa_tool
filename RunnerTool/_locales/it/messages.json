@@ -6,215 +6,261 @@
         "message": "Strumenti utili per il bravo corridore.",
         "description": "Qualche funzione utile per calcolare velocità e tempi di percorrenza per il maratoneta."
     },
-    "btDistHM": {
-        "message": "Mezza Maratona"
-    },
-    "btDist10k": {
-        "message": "10K"
-    },
-    "btDist5k": {
-        "message": "5K"
-    },
-    "btDist1k": {
-        "message": "1K"
-    },
-    "btDistClearRes": {
-        "message": "Cancella risultato"
-    },
-    "btCalcMean": {
-        "message": "Calcola media"
-    },
-    "btFinalTime": {
-        "message": "Calcola tempo finale"
-    },
-    "btCalcTableRangeVel": {
-        "message": "Converti velocità"
-    },
-    "btMinutiCorsi": {
-        "message": "Calcola tempo finale"
-    },
-    "btTablePerDist": {
-        "message": "Tabella passaggi"
-    },
-    "btPercPulsMax": {
-        "message": "Percentuali polso massimo"
-    },
-    "btEqTempi": {
-        "message": "Equivalenza tempi"
-    },
-    "btCalcDetTeoreal": {
-        "message": "Tabella teorico reale"
-    },
-    "btEditDetPass": {
-        "message": "Cambia dettagli"
-    },
-    "btNewDetPass": {
-        "message": "Nuovi dati"
-    },
-    "btSommaTempi": {
-        "message": "Somma i tempi"
-    },
-    "btSottrTempi": {
-        "message": "Sottrae i tempi"
-    },
-    "btRisSumInT1": {
-        "message": "Risultato in T1"
-    },
-    "btDistMara": {
-        "message": "Maratona"
-    },
-    "msgT1": {
-        "message": "Tempo 1"
-    },
-    "msgT2": {
-        "message": "Tempo 2"
-    },
-    "msgPassRealiPar": {
-        "message": "Dettaglio passaggi reali con elementi separati da virgola, singolo elemento (km e tempo in hh:mm:ss) separato da punto e virgola. Esempio maratona di Roma [\"5;0:30:16,10;0:57:37, 15;1:24:29, 21.097;1:56:56, 25;2:17:29,30;2:44:08,35;3:10:18, 40;3:38:18, 42.2;3:50:16\")"
-    },
-    "msgVelTeo": {
-        "message": "Velocità teorica al Km (es. \"5:27\") in mm:ss"
-    },
-    "msgFunUtil": {
-        "message": "Funzioni utili per il corridore"
-    },
-    "msgDis1": {
-        "message": "Distanza (es \"5.1\") in Km"
-    },
-    "msgDis2": {
-        "message": "Distanza (es \"42.2\") in Km"
-    },
-    "msgTime1": {
-        "message": "Tempo (es. \"00:37:36\") in hh:mm:ss"
-    },
-    "msgVelAlKm": {
-        "message": "velocità al Km (es. \"04:36\") in mm:ss"
-    },
-    "msgRangeVelOpt": {
-        "message": "Serie di velocità in Km/h (es. \"10,10.2,11.3,11.5,12.9\")"
-    },
-    "msgVelKmh12": {
-        "message": "Velocità al Km (es. \"12\") in Km/h"
-    },
-    "msgDis4Hm": {
-        "message": "Distanza (es. \"21.1\") in Km"
-    },
-    "msgVelAlkm1": {
-        "message": "velocità al Km (es. \"5:27\") in mm:ss"
-    },
-    "msgPassoOStep": {
-        "message": "passo o step (es. \"5\") in Km"
-    },
-    "msgPolsoMax": {
-        "message": "Polso massimo"
-    },
-    "msgDist10km": {
-        "message": "Distanza (es \"10km\")"
-    },
-    "msgTempo3736": {
-        "message": "Tempo (es. \"00:37:36\") in hh:mm:ss"
-    },
-    "msgDistObbiet": {
-        "message": "Distanza Obbiettivo (es \"42 km\")"
-    },
-    "msg__aggiungi": {
-        "message": "Aggiungi"
-    },
-    "msg__ok": {
-        "message": "Ok"
-    },
-    "msg__cancella": {
-        "message": "Cancella"
-    },
     "msg__calcola_vel": {
-        "message": "Calcola velocità  media per la distanza: "
+        "message": "Calcola velocità  media per la distanza: ",
+        "_orig": "Calcola velocità  media per la distanza: "
     },
-    "msg___km_nel_tem": {
-        "message": " Km nel tempo: "
+    "msg__mezza_marat": {
+        "message": "Mezza Maratona",
+        "_orig": "Mezza Maratona"
+    },
+    "msg__cancella_ri": {
+        "message": "Cancella risultato",
+        "_orig": "Cancella risultato"
+    },
+    "msg__calcola_med": {
+        "message": "Calcola media",
+        "_orig": "Calcola media"
     },
     "msg__calcola_tem": {
-        "message": "Calcola tempo finale con una distanza:  "
+        "message": "Calcola tempo finale",
+        "_orig": "Calcola tempo finale"
     },
-    "msg___km_e_veloc": {
-        "message": " Km e velocità  al km:  "
-    },
-    "msg__mostra_tabe": {
-        "message": "Mostra tabella velocità  per il range: "
-    },
-    "msg__sono_acceta": {
-        "message": "Sono accetabili solo valori positivi"
-    },
-    "msg__minuti_cors": {
-        "message": "Minuti corsi alla velocità  "
-    },
-    "msg___km/h_per_u": {
-        "message": " Km/h per una distanza di "
+    "msg__converti_ve": {
+        "message": "Converti velocità",
+        "_orig": "Converti velocità"
     },
     "msg__tabella_pas": {
-        "message": "Tabella passaggi sui "
+        "message": "Tabella passaggi",
+        "_orig": "Tabella passaggi"
     },
-    "msg___km,_con_un": {
-        "message": " Km, con uno step di "
+    "msg__percentuali": {
+        "message": "Percentuali polso massimo",
+        "_orig": "Percentuali polso massimo"
     },
-    "msg___km_ed_una_": {
-        "message": " Km ed una velocità  di: "
+    "msg__equivalenza": {
+        "message": "Equivalenza tempi",
+        "_orig": "Equivalenza tempi"
     },
-    "msg___mm_ss_al_k": {
-        "message": " mm:ss al Km"
-    },
-    "msg__valore_batt": {
-        "message": "Valore battito massimo fuori soglia (50-250)"
-    },
-    "msg__tabella_per": {
-        "message": "Tabella percentuali polso "
-    },
-    "msg__calcola_equ": {
-        "message": "Calcola equivalenza di tempi per: "
-    },
-    "msg___con_tempo_": {
-        "message": " con tempo "
-    },
-    "msg___e_": {
-        "message": " e "
-    },
-    "msg__tabella_tor": {
-        "message": "Tabella torico-reale velocità : "
-    },
-    "msg___mm_ss_al_k_1": {
-        "message": " mm:ss al Km "
-    },
-    "msg__modifica": {
-        "message": "Modifica"
-    },
-    "msg__rimuovi": {
-        "message": "Rimuovi"
-    },
-    "msg___somma_di_": {
-        "message": " Somma di "
-    },
-    "msg___sottrazion": {
-        "message": " Sottrazione: "
-    },
-    "msg__errore_nel_": {
-        "message": "Errore nel calcolo: "
-    },
-    "msg__teorico": {
-        "message": "Teorico"
-    },
-    "msg__reale": {
-        "message": "REALE"
-    },
-    "msg__delta": {
-        "message": "Delta"
-    },
-    "msg__pulsazioni": {
-        "message": "Pulsazioni"
+    "msg__tabella_teo": {
+        "message": "Tabella teorico reale",
+        "_orig": "Tabella teorico reale"
     },
     "msg__cambia_dett": {
-        "message": "Cambia dettagli"
+        "message": "Cambia dettagli",
+        "_orig": "Cambia dettagli"
     },
     "msg__nuovi_dati": {
-        "message": "Nuovi dati"
+        "message": "Nuovi dati",
+        "_orig": "Nuovi dati"
+    },
+    "msg__somma_i_tem": {
+        "message": "Somma i tempi",
+        "_orig": "Somma i tempi"
+    },
+    "msg__sottrae_i_t": {
+        "message": "Sottrae i tempi",
+        "_orig": "Sottrae i tempi"
+    },
+    "msg__risultato_i": {
+        "message": "Risultato in T1",
+        "_orig": "Risultato in T1"
+    },
+    "msg__maratona": {
+        "message": "Maratona",
+        "_orig": "Maratona"
+    },
+    "msg__tempo_1": {
+        "message": "Tempo 1",
+        "_orig": "Tempo 1"
+    },
+    "msg__tempo_2": {
+        "message": "Tempo 2",
+        "_orig": "Tempo 2"
+    },
+    "msg__dettaglio_p": {
+        "message": "Dettaglio passaggi reali con elementi separati da virgola, singolo elemento (km e tempo in hh:mm:ss) separato da punto e virgola. Esempio maratona di Roma [\"5;0:30:16,10;0:57:37, 15;1:24:29, 21.097;1:56:56, 25;2:17:29,30;2:44:08,35;3:10:18, 40;3:38:18, 42.2;3:50:16\"",
+        "_orig": "Dettaglio passaggi reali con elementi separati da virgola, singolo elemento (km e tempo in hh:mm:ss) separato da punto e virgola. Esempio maratona di Roma [\"5;0:30:16,10;0:57:37, 15;1:24:29, 21.097;1:56:56, 25;2:17:29,30;2:44:08,35;3:10:18, 40;3:38:18, 42.2;3:50:16\""
+    },
+    "msg__velocita_te": {
+        "message": "Velocità teorica al Km (es. \"5:27\") in mm:ss",
+        "_orig": "Velocità teorica al Km (es. \"5:27\") in mm:ss"
+    },
+    "msg__funzioni_ut": {
+        "message": "Funzioni utili per il corridore",
+        "_orig": "Funzioni utili per il corridore"
+    },
+    "msg__distanza_es": {
+        "message": "Distanza (es \"5.1\") in Km",
+        "_orig": "Distanza (es \"5.1\") in Km"
+    },
+    "msg__distanza_es_1": {
+        "message": "Distanza (es \"42.2\") in Km",
+        "_orig": "Distanza (es \"42.2\") in Km"
+    },
+    "msg__tempo_es__0": {
+        "message": "Tempo (es. \"00:37:36\") in hh:mm:ss",
+        "_orig": "Tempo (es. \"00:37:36\") in hh:mm:ss"
+    },
+    "msg__velocita_al": {
+        "message": "velocità al Km (es. \"04:36\") in mm:ss",
+        "_orig": "velocità al Km (es. \"04:36\") in mm:ss"
+    },
+    "msg__serie_di_ve": {
+        "message": "Serie di velocità in Km/h (es. \"10,10.2,11.3,11.5,12.9\")",
+        "_orig": "Serie di velocità in Km/h (es. \"10,10.2,11.3,11.5,12.9\")"
+    },
+    "msg__velocita_al_1": {
+        "message": "Velocità al Km (es. \"12\") in Km/h",
+        "_orig": "Velocità al Km (es. \"12\") in Km/h"
+    },
+    "msg__distanza_es_2": {
+        "message": "Distanza (es. \"21.1\") in Km",
+        "_orig": "Distanza (es. \"21.1\") in Km"
+    },
+    "msg__velocita_al_2": {
+        "message": "velocità al Km (es. \"5:27\") in mm:ss",
+        "_orig": "velocità al Km (es. \"5:27\") in mm:ss"
+    },
+    "msg__passo_o_ste": {
+        "message": "passo o step (es. \"5\") in Km",
+        "_orig": "passo o step (es. \"5\") in Km"
+    },
+    "msg__polso_massi": {
+        "message": "Polso massimo",
+        "_orig": "Polso massimo"
+    },
+    "msg__distanza_es_3": {
+        "message": "Distanza (es \"10km\")",
+        "_orig": "Distanza (es \"10km\")"
+    },
+    "msg__distanza_ob": {
+        "message": "Distanza Obbiettivo (es \"42 km\")",
+        "_orig": "Distanza Obbiettivo (es \"42 km\")"
+    },
+    "msg__aggiungi": {
+        "message": "Aggiungi",
+        "_orig": "Aggiungi"
+    },
+    "msg__ok": {
+        "message": "Ok",
+        "_orig": "Ok"
+    },
+    "msg__cancella": {
+        "message": "Cancella",
+        "_orig": "Cancella"
+    },
+    "msg__calcola_vel_1": {
+        "message": "Calcola velocità  media per la distanza: ",
+        "_orig": "Calcola velocità  media per la distanza: "
+    },
+    "msg___km_nel_tem": {
+        "message": " Km nel tempo: ",
+        "_orig": " Km nel tempo: "
+    },
+    "msg__calcola_tem_1": {
+        "message": "Calcola tempo finale con una distanza:  ",
+        "_orig": "Calcola tempo finale con una distanza:  "
+    },
+    "msg___km_e_veloc": {
+        "message": " Km e velocità  al km:  ",
+        "_orig": " Km e velocità  al km:  "
+    },
+    "msg__mostra_tabe": {
+        "message": "Mostra tabella velocità  per il range: ",
+        "_orig": "Mostra tabella velocità  per il range: "
+    },
+    "msg__sono_acceta": {
+        "message": "Sono accetabili solo valori positivi",
+        "_orig": "Sono accetabili solo valori positivi"
+    },
+    "msg__minuti_cors": {
+        "message": "Minuti corsi alla velocità  ",
+        "_orig": "Minuti corsi alla velocità  "
+    },
+    "msg___km_h_per_u": {
+        "message": " Km/h per una distanza di ",
+        "_orig": " Km/h per una distanza di "
+    },
+    "msg__tabella_pas_1": {
+        "message": "Tabella passaggi sui ",
+        "_orig": "Tabella passaggi sui "
+    },
+    "msg___km_con_uno": {
+        "message": " Km, con uno step di ",
+        "_orig": " Km, con uno step di "
+    },
+    "msg___km_ed_una_": {
+        "message": " Km ed una velocità  di: ",
+        "_orig": " Km ed una velocità  di: "
+    },
+    "msg___mm_ss_al_k": {
+        "message": " mm:ss al Km",
+        "_orig": " mm:ss al Km"
+    },
+    "msg__valore_batt": {
+        "message": "Valore battito massimo fuori soglia (50-250)",
+        "_orig": "Valore battito massimo fuori soglia (50-250)"
+    },
+    "msg__tabella_per": {
+        "message": "Tabella percentuali polso ",
+        "_orig": "Tabella percentuali polso "
+    },
+    "msg__calcola_equ": {
+        "message": "Calcola equivalenza di tempi per: ",
+        "_orig": "Calcola equivalenza di tempi per: "
+    },
+    "msg___con_tempo_": {
+        "message": " con tempo ",
+        "_orig": " con tempo "
+    },
+    "msg___e_": {
+        "message": " e ",
+        "_orig": " e "
+    },
+    "msg__tabella_tor": {
+        "message": "Tabella torico-reale velocità : ",
+        "_orig": "Tabella torico-reale velocità : "
+    },
+    "msg___mm_ss_al_k_1": {
+        "message": " mm:ss al Km ",
+        "_orig": " mm:ss al Km "
+    },
+    "msg__modifica": {
+        "message": "Modifica",
+        "_orig": "Modifica"
+    },
+    "msg__rimuovi": {
+        "message": "Rimuovi",
+        "_orig": "Rimuovi"
+    },
+    "msg___somma_di_": {
+        "message": " Somma di ",
+        "_orig": " Somma di "
+    },
+    "msg___sottrazion": {
+        "message": " Sottrazione: ",
+        "_orig": " Sottrazione: "
+    },
+    "msg__errore_nel_": {
+        "message": "Errore nel calcolo: ",
+        "_orig": "Errore nel calcolo: "
+    },
+    "msg__teorico": {
+        "message": "Teorico",
+        "_orig": "Teorico"
+    },
+    "msg__reale": {
+        "message": "REALE",
+        "_orig": "REALE"
+    },
+    "msg__delta": {
+        "message": "Delta",
+        "_orig": "Delta"
+    },
+    "msg__pulsazioni": {
+        "message": "Pulsazioni",
+        "_orig": "Pulsazioni"
     }
 
 }

@@ -63,7 +63,11 @@ LIST
       #       but erb and clipboard are working in utf-8, so there is a need of a conversion.
       #       msg_det.encode('utf-8').encode is silently not working because a converter is missed 
       #       and in this case Iconv.conv is used instead
-      luz_trans = transalte(msg_det, lang_id) if lang_id != @source_lang_id
+      
+      luz_trans = msg_det
+      if lang_id != @source_lang_id 
+        luz_trans = transalte(msg_det, lang_id)
+      end
       if RUBY_VERSION != "1.8.6"
         original_text = Iconv.conv('utf-8', 'ISO-8859-1', msg_det)
         msg_det = Iconv.conv('utf-8', 'ISO-8859-1',  luz_trans) #Iconv.new(to, from)

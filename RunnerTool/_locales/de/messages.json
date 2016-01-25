@@ -82,7 +82,7 @@
         "_orig": "Tempo 2"
     },
     "msg__dettaglio_p": {
-        "message": "",
+        "message": "MISSED!!!!",
         "_orig": "Dettaglio passaggi reali con elementi separati da virgola, singolo elemento (km e tempo in hh:mm:ss) separato da punto e virgola. Esempio maratona di Roma [\"5;0:30:16,10;0:57:37, 15;1:24:29, 21.097;1:56:56, 25;2:17:29,30;2:44:08,35;3:10:18, 40;3:38:18, 42.2;3:50:16\""
     },
     "msg__velocita_te": {
@@ -98,19 +98,19 @@
         "_orig": "Distanza (es \"5.1\") in Km"
     },
     "msg__distanza_es_1": {
-        "message": "Entfernung (zB \"42.2 \") in Kilometern",
+        "message": "Entfernung (zB \"42,2 \") in Kilometern",
         "_orig": "Distanza (es \"42.2\") in Km"
     },
-    "msg__tempo_es__": {
-        "message": "Zeit (zB \"00: 37: 36\".) Im hh: mm: ss",
+    "msg__tempo_es__0": {
+        "message": "Zeit (zB \"00: 37: 36 \".) Im hh: mm: ss",
         "_orig": "Tempo (es. \"00:37:36\") in hh:mm:ss"
     },
     "msg__velocita_al": {
-        "message": "bei Km (zB \"04: 36\".) in mm: ss",
+        "message": "bei Km (zB \"04: 36 \".) in mm: ss",
         "_orig": "velocità al Km (es. \"04:36\") in mm:ss"
     },
     "msg__serie_di_ve": {
-        "message": "in km / h (z.B. \"10,10.2,11.3,11.5,12.9 \")",
+        "message": "in km / h (z. \"10,10.2,11.3,11.5,12.9 \")",
         "_orig": "Serie di velocità in Km/h (es. \"10,10.2,11.3,11.5,12.9\")"
     },
     "msg__velocita_al_1": {
@@ -137,7 +137,7 @@
         "message": "Entfernung (zB \"10km \")",
         "_orig": "Distanza (es \"10km\")"
     },
-    "msg__tempo_es___1": {
+    "msg__tempo_es__0_1": {
         "message": "Zeit (zB \"00: 37: 36 \".) Im hh: mm: ss",
         "_orig": "Tempo (es. \"00:37:36\") in hh:mm:ss"
     },
@@ -276,5 +276,6 @@
     "msg__nuovi_dati_1": {
         "message": "Neue Daten",
         "_orig": "Nuovi dati"
-    }
+    },
+
 }
