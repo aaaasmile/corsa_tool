@@ -1,4 +1,0 @@
-    "<%= name_lbl %>": {
-        "message": "<%= msg_det %>",
-        "_orig": "<%= original_text %>"
-    },

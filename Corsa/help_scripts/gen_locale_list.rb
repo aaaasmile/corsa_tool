@@ -1,4 +1,4 @@
-﻿#file: gen_locale_list.rb
+#file: gen_locale_list.rb
 
 require 'rubygems'
 require 'log4r'
@@ -21,11 +21,10 @@ class Generator
     @log.outputters << Outputter.stdout
     @source_lang_id = "it"
     if RUBY_VERSION == "1.8.6"
-      # the service works but some words with accent are not translated
-      @agent = Mechanize.new #accent words in source like Ã  Ã¨ are not working, but it works in 1.9.3
+      # the service works but some words with accent are not translated and for it->de is pretty useless
+      @agent = Mechanize.new #accent words in source like � � are not working, but it works in 2.1.7 with iconv
     else
-      # arguments inserted to make it working with 1.9.3 (UTF8 file creation)
-      # works everything
+      # arguments inserted to make it working with  2.1.7
       @agent = Mechanize.new{|a| a.ssl_version, a.verify_mode = 'SSLv3', OpenSSL::SSL::VERIFY_NONE}
     end
     @agent.set_proxy('172.28.0.53', '3128')
@@ -43,7 +42,6 @@ LIST
     
     result = ",\n"
     template = ERB.new(template_item)
-    #template = read_template_from_file()
     
     labels = {}
     File.open(string_list_fname).each_line do |line|
@@ -60,17 +58,17 @@ LIST
           name_lbl = newname
         end
       end
-      #original_text = msg_det.encode('UTF-8').encode#msg_det.encode('CP850').encode
-      #p original_text
-      p msg_det.encode
-      #p name_lbl
+      
+      # NOTE: the translation list is ISO-8859-1, the result from google is also in ISO-8859-1,
+      #       but erb and clipboard are working in utf-8, so there is a need of a conversion.
+      #       msg_det.encode('utf-8').encode is silently not working because a converter is missed 
+      #       and in this case Iconv.conv is used instead
       luz_trans = transalte(msg_det, lang_id) if lang_id != @source_lang_id
       if RUBY_VERSION != "1.8.6"
-        #msg_det = luz_trans.encode('UTF8').encode#luz_trans.encode('CP850').encode
-		original_text = Iconv.conv('utf-8', 'ISO-8859-1', msg_det)
-		msg_det = Iconv.conv('utf-8', 'ISO-8859-1',  luz_trans) #Iconv.new(to, from)
+        original_text = Iconv.conv('utf-8', 'ISO-8859-1', msg_det)
+        msg_det = Iconv.conv('utf-8', 'ISO-8859-1',  luz_trans) #Iconv.new(to, from)
       else
-		original_text = msg_det
+        original_text = msg_det
         msg_det = luz_trans
       end
       
@@ -82,26 +80,15 @@ LIST
     end
     puts result
     if RUBY_VERSION == "2.1.7"
-      Encoding.default_external = 'utf-8'
-      p result.encode('UTF-8').encode
-      Clipboard.copy(result.encode('UTF-8').encode)
+      Clipboard.copy(result)
     else
       Clipboard.set_data result
     end
     
-    
   end
 
   private 
-  
-  def read_template_from_file
-    fullname = File.dirname(__FILE__) + "/template.rbtm"
-    file = File.new(fullname, "r")
-    template = ERB.new(file.read)
-    file.close
-    return template
-  end
-
+ 
   def transalte(text_to_transl, lang_id)
     result = text_to_transl
     #use simply the service root. Source and destination are selected using the form.
