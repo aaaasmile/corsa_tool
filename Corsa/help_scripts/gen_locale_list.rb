@@ -140,7 +140,7 @@ LIST
     if RUBY_VERSION != "1.8.6"
       msg_det = Iconv.conv('utf-8', 'ISO-8859-1', msg_det)
     end
-    lblname_candidate = msg_det.gsub(' ', '_').downcase.gsub(':', '_').gsub('\\', '_').gsub(',', '').gsub('/', '_').gsub('(', '').gsub('.','').gsub('à', 'a').gsub('è', 'e').gsub('ù', 'u').gsub('ò', 'o')
+    lblname_candidate = msg_det.gsub(' ', '_').downcase.gsub(':', '_').gsub('\\', '_').gsub(',', '').gsub('/', '_').gsub('(', '').gsub('.','').gsub('à', 'a').gsub('è', 'e').gsub('ù', 'u').gsub('ò', 'o').gsub('"', '')
     lblname_candidate = lblname_candidate[0..10] if lblname_candidate.length > 10
     name_lbl = lblname_candidate
     name_lbl = "msg__#{lblname_candidate}"
