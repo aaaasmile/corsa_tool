@@ -1,4 +1,4 @@
-#file: gen_locale_list.rb
+﻿#file: gen_locale_list.rb
 
 require 'rubygems'
 require 'log4r'
@@ -22,7 +22,7 @@ class Generator
     @source_lang_id = "it"
     if RUBY_VERSION == "1.8.6"
       # the service works but some words with accent are not translated and for it->de is pretty useless
-      @agent = Mechanize.new #accent words in source like � � are not working, but it works in 2.1.7 with iconv
+      @agent = Mechanize.new #accent words in source like è à are not working, but it works in 2.1.7 with iconv
     else
       # arguments inserted to make it working with  2.1.7
       @agent = Mechanize.new{|a| a.ssl_version, a.verify_mode = 'SSLv3', OpenSSL::SSL::VERIFY_NONE}
@@ -76,7 +76,6 @@ LIST
       
       aString = template.result(binding)
       result += aString
-      break
     end
     puts result
     if RUBY_VERSION == "2.1.7"
@@ -138,9 +137,12 @@ LIST
   end
   
   def get_label_name(msg_det)
-    lblname_candidate = msg_det.gsub(' ', '_').downcase.gsub(':', '_')
+    if RUBY_VERSION != "1.8.6"
+      msg_det = Iconv.conv('utf-8', 'ISO-8859-1', msg_det)
+    end
+    lblname_candidate = msg_det.gsub(' ', '_').downcase.gsub(':', '_').gsub('\\', '_').gsub(',', '').gsub('/', '_').gsub('(', '').gsub('.','').gsub('à', 'a').gsub('è', 'e').gsub('ù', 'u').gsub('ò', 'o')
     lblname_candidate = lblname_candidate[0..10] if lblname_candidate.length > 10
-    name_lbl = lblname_candidate.gsub('à', 'a').gsub('è', 'e').gsub('ù', 'u').gsub('ò', 'o')
+    name_lbl = lblname_candidate
     name_lbl = "msg__#{lblname_candidate}"
     return name_lbl
   end
