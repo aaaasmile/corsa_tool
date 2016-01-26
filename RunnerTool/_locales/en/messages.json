@@ -138,7 +138,7 @@
         "_orig": "Distanza (es \"10km\")"
     },
     "msg__tempo_es__0_1": {
-        "message": "Time (eg. \ "00: 37: 36 \") in hh: mm: ss",
+        "message": "Time (eg. \"00: 37: 36 \") in hh: mm: ss",
         "_orig": "Tempo (es. \"00:37:36\") in hh:mm:ss"
     },
     "msg__distanza_ob": {
