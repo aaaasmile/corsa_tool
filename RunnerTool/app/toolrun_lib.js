@@ -12,7 +12,7 @@ var conv_tempi = function () {
             ssi = parseInt(res_arr[2], 10);
             if (hhi > 1000 || mmi > 59 || ssi > 59) {
                 has_errors = true;
-                error_msg = "Ore, minuti o secondi non sono in range (" + res_arr.join(',') + ")";
+                error_msg = run_view.getTranslMessage("custmsg_ore_minuti_secondi") + res_arr.join(',') + ")";
                 return undefined;
             }
             return { hh: hhi, mm: mmi, ss: ssi };
@@ -23,13 +23,13 @@ var conv_tempi = function () {
             ssi = parseInt(res_arr[1], 10);
             if (mmi > 59 || ssi > 59) {
                 has_errors = true;
-                error_msg = "minuti o secondi non sono in range (" + res_arr.join(',') + ")";
+                error_msg = run_view.getTranslMessage("custmsg_minuti_o_secondi") + res_arr.join(',') + ")";
                 return undefined;
             }
             return { hh: hhi, mm: mmi, ss: ssi };
         }
         has_errors = true;
-        error_msg = "Formato del tempo non corretto per '" + time_str + "'";
+        error_msg = run_view.getTranslMessage("custmsg_formato_del_tempo_non") + "'" + time_str + "'";
         return undefined;
     }
 
@@ -144,7 +144,7 @@ var conv_tempi = function () {
         }
         if (time_frm.hh > 0) {
             has_errors = true;
-            error_msg = 'Errore nel formato ' + vel_km_min_str + ', aspetto una stringa come mm:ss';
+            error_msg = run_view.getTranslMessage('custmsg_err_nel_formato') + vel_km_min_str + run_view.getTranslMessage('custmsg_aspetto_una_stringa');
             return undefined;
         }
         mm = time_frm.mm;
@@ -217,7 +217,7 @@ var conv_tempi = function () {
         var index_org = eq_tabl[dist_org];
         var index_dest = eq_tabl[dist_goal];
         if (index_org == undefined || index_dest == undefined) {
-            error_msg = "Errore formato equivalenza distanze non riconosciuto";
+            error_msg = run_view.getTranslMessage("custmsg_errore_formato_equiv");
             has_errors = true;
             return undefined;
         }
@@ -275,13 +275,13 @@ var conv_tempi = function () {
     var parse_step_time_str = function (step_time_str) {
         var items = step_time_str.split(";");
         if (items.length != 2) {
-            return build_error("Errore nel formato di " + step_time_str + ", il separatore ;  va messo tra il km e il tempo");
+            return build_error(run_view.getTranslMessage("custmsg_errore_nel_formato_di") + step_time_str + run_view.getTranslMessage("custmsg_il_separatore_va_mes"));
         }
         var km_str = items[0];
         var tempo_str = items[1];
         var time_det_arr = tempo_str.split(":");
         if (time_det_arr.length != 3) {
-            return build_error("Errore nel formato di " + step_time_str + ", il tempo " + tempo_str + " va messo in formato hh:mm:ss");
+            return build_error(run_view.getTranslMessage("custmsg_errore_nel_formato_di") + step_time_str + run_view.getTranslMessage("custmsg_il_tempo") + tempo_str + run_view.getTranslMessage("custmsg_va_messo"));
         }
         var step_km = parseFloat(km_str);
         var hh = parseInt(time_det_arr[0], 10);

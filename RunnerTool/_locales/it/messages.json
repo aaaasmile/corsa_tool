@@ -23,6 +23,47 @@
         "message": "Polso massimo",
         "_orig": "Polso massimo"
     },
+    "custmsg_err_nel_formato": {
+        "message": "Errore nel formato ",
+        "_orig": "Errore nel formato "
+    },
+    "custmsg_aspetto_una_stringa": {
+        "message": ", aspetto una stringa come mm:ss",
+        "_orig": ", aspetto una stringa come mm:ss"
+    },
+
+    "custmsg_ore_minuti_secondi": {
+        "message": "Ore, minuti o secondi non sono in range (",
+        "_orig": "Ore, minuti o secondi non sono in range ("
+    },
+    "custmsg_minuti_o_secondi": {
+        "message": "minuti o secondi non sono in range (",
+        "_orig": "minuti o secondi non sono in range ("
+    },
+    "custmsg_formato_del_tempo_non": {
+        "message": "Formato del tempo non corretto per",
+        "_orig": "Formato del tempo non corretto per"
+    },
+    "custmsg_errore_formato_equiv": {
+        "message": "Errore formato equivalenza distanze non riconosciuto",
+        "_orig": "Errore formato equivalenza distanze non riconosciuto"
+    },
+    "custmsg_errore_nel_formato_di": {
+        "message": "Errore nel formato di ",
+        "_orig": "Errore nel formato di "
+    },
+    "custmsg_il_separatore_va_mes": {
+        "message": ", il separatore ;  va messo tra il km e il tempo",
+        "_orig": ", il separatore ;  va messo tra il km e il tempo"
+    },
+    "custmsg_il_tempo": {
+        "message": ", il tempo ",
+        "_orig": ", il tempo "
+    },
+    "custmsg_va_messo": {
+        "message": " va messo in formato hh:mm:ss",
+        "_orig": " va messo in formato hh:mm:ss"
+    },
     
     "msg__calcola_vel": {
         "message": "Calcola velocità  media per la distanza: ",

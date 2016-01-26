@@ -13,6 +13,46 @@
         "message": "Maximale Pulsfrequenz",
         "_orig": "Polso massimo"
     },
+    "custmsg_err_nel_formato": {
+        "message": "Formatfehler",
+        "_orig": "Errore nel formato "
+    },
+    "custmsg_aspetto_una_stringa": {
+        "message": ", erwarte eine Zeichenkette in mm:ss",
+        "_orig": ", aspetto una stringa come mm:ss"
+    },
+    "custmsg_ore_minuti_secondi": {
+        "message": "Stunden oder Sekunden sind nicht korrekt (",
+        "_orig": "Ore, minuti o secondi non sono in range ("
+    },
+    "custmsg_minuti_o_secondi": {
+        "message": "Minuten oder Sekunden sind nicht korrekt (",
+        "_orig": "minuti o secondi non sono in range ("
+    },
+    "custmsg_formato_del_tempo_non": {
+        "message": "Zeitformat ist nicht korrekt für ",
+        "_orig": "Formato del tempo non corretto per"
+    },
+    "custmsg_errore_formato_equiv": {
+        "message": "Äquivalenz-Berechnung Fehler, Distanz nicht erkannt",
+        "_orig": "Errore formato equivalenza distanze non riconosciuto"
+    },
+    "custmsg_errore_nel_formato_di": {
+        "message": "Formatfehler von ",
+        "_orig": "Errore nel formato di "
+    },
+    "custmsg_il_separatore_va_mes": {
+        "message": ", das Trennzeichen ; soll zwischen Km und Zeit sein",
+        "_orig": ", il separatore ;  va messo tra il km e il tempo"
+    },
+    "custmsg_il_tempo": {
+        "message": ", die Zeit ",
+        "_orig": ", il tempo "
+    },
+    "custmsg_va_messo": {
+        "message": " soll im Format hh:mm:ss sein",
+        "_orig": " va messo in formato hh:mm:ss"
+    },
     "msg__calcola_vel": {
         "message": "Durchschnittsgeschwindigkeit für die Strecke: ",
         "_orig": "Calcola velocità  media per la distanza: "
@@ -182,7 +222,7 @@
         "_orig": " Km e velocità  al km:  "
     },
     "msg__mostra_tabe": {
-        "message": "Tempo-Tabelle für den Bereich: ",
+        "message": "Tempo-Tabelle für die Serie: ",
         "_orig": "Mostra tabella velocità  per il range: "
     },
     "msg__sono_acceta": {
