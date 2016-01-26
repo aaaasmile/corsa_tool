@@ -148,8 +148,10 @@ $(document).ready(function () {
     $("#msgT2").html(run_view.getTranslMessage('msg__tempo_2'));
     $("#msgRangeVelOpt").html(run_view.getTranslMessage('msg__serie_di_ve'));
     $("#msgFunUtil").html(run_view.getTranslMessage('msg__funzioni_ut'));
-
-
+    $("#tbCmdLabel").html(run_view.getTranslMessage('Comandi')); // ISS TODO
+    $("#tbCmdTempo").html(run_view.getTranslMessage('Tempo'));// ISS TODO
+    $("#tbCmdTempo2").html(run_view.getTranslMessage('Tempo'));// ISS TODO
+   
     $("#cmbDisteq").combobox();
     $("#cmbDisteq_goal").combobox();
 
@@ -159,6 +161,7 @@ $(document).ready(function () {
         height: 450,
         width: 390,
         modal: true,
+        title: run_view.getTranslMessage('Tabella dati reali'),// ISS TODO
         buttons: [
             {
                 text: run_view.getTranslMessage('msg__aggiungi'),
@@ -189,6 +192,7 @@ $(document).ready(function () {
         height: 200,
         width: 300,
         modal: true,
+        title: run_view.getTranslMessage('Tempo effettivo'),// ISS TODO
         buttons: [
             {
                 text: run_view.getTranslMessage('msg__ok'),
