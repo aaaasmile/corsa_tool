@@ -158,6 +158,6 @@ if $0 == __FILE__
   # NOTE: to build the list, copied into the clipboard, user ruby 1.9.3. For developement it is enough the 1.8.6.
   fname = File.dirname(__FILE__) + "/string_list.txt"
   gen = Generator.new
-  gen.run(fname, 'de')
+  gen.run(fname, 'en')
   
 end
