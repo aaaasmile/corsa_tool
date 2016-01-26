@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     // Toolbar teo/real table
     $("#btNewDetPass")
-        .html(run_view.getTranslMessage('btNewDetPass'))
+        .html(run_view.getTranslMessage('msg__nuovi_dati'))
         .button({
             text: false,
             icons: {
@@ -17,7 +17,7 @@ $(document).ready(function () {
         });
 
     $("#btEditDetPass")
-        .html(run_view.getTranslMessage('btEditDetPass'))
+        .html(run_view.getTranslMessage('msg__cambia_dett'))
         .button({
             text: false,
             icons: {
@@ -28,7 +28,7 @@ $(document).ready(function () {
         });
 
     $("#btCalcDetTeoreal")
-        .html(run_view.getTranslMessage('btCalcDetTeoreal'))
+        .html(run_view.getTranslMessage('msg__tabella_teo'))
         .button().click(function () {
             run_view.confronta_tabella();
             run_view.set_result_to('liCalcDetTeoreal');
@@ -36,12 +36,12 @@ $(document).ready(function () {
 
     // toolbar
     $("#btDistMara")
-        .html(run_view.getTranslMessage('btDistMara'))
+        .html(run_view.getTranslMessage('msg__maratona'))
         .button().click(function () {
             run_view.set_distance(42.2);
         });
     $("#btDistHM")
-        .html(run_view.getTranslMessage('btDistHM'))
+        .html(run_view.getTranslMessage('msg__mezza_marat'))
         .button().click(function () {
             run_view.set_distance(21.1);
         });
@@ -61,7 +61,7 @@ $(document).ready(function () {
             run_view.set_distance(1.0);
         });
     $("#btDistClearRes")
-        .html(run_view.getTranslMessage('btDistClearRes'))
+        .html(run_view.getTranslMessage('msg__cancella_ri'))
         .button().click(function () {
             run_view.clear_result();
         });
@@ -69,84 +69,84 @@ $(document).ready(function () {
     // buttons
 
     $("#btCalcMean")
-        .html(run_view.getTranslMessage('btCalcMean'))
+        .html(run_view.getTranslMessage('msg__calcola_med'))
         .button().click(function () {
             run_view.mean_vel();
             run_view.set_result_to('liCalcMean');
         });
     $("#btFinalTime")
-        .html(run_view.getTranslMessage('btFinalTime'))
+        .html(run_view.getTranslMessage('msg__calcola_tem'))
         .button().click(function () {
             run_view.tempo_finale();
             run_view.set_result_to('liFinalTime');
         });
     $("#btCalcTableRangeVel")
-        .html(run_view.getTranslMessage('btCalcTableRangeVel'))
+        .html(run_view.getTranslMessage('msg__converti_ve'))
         .button().click(function () {
             run_view.calculate_table_range_vel();
             run_view.set_result_to('liCalcTableRangeVel');
         });
     $("#btMinutiCorsi")
-        .html(run_view.getTranslMessage('btMinutiCorsi'))
+        .html(run_view.getTranslMessage('msg__calcola_tem'))
         .button().click(function () {
             run_view.minuti_corsi();
             run_view.set_result_to('liMinutiCorsi');
         });
     $("#btTablePerDist")
-        .html(run_view.getTranslMessage('btTablePerDist'))
+        .html(run_view.getTranslMessage('msg__tabella_pas'))
         .button().click(function () {
             run_view.tabella_per_dist();
             run_view.set_result_to('liTablePerDist');
         });
     $("#btPercPulsMax")
-        .html(run_view.getTranslMessage('btPercPulsMax'))
+        .html(run_view.getTranslMessage('msg__percentuali'))
         .button().click(function () {
             run_view.freq_puls_table();
             run_view.set_result_to('liPercPulsMax');
         });
     $("#btEqTempi")
-        .html(run_view.getTranslMessage('btEqTempi'))
+        .html(run_view.getTranslMessage('msg__equivalenza'))
         .button().click(function () {
             run_view.equilval_tempi();
             run_view.set_result_to('liEqTempi');
         });
     $("#btSommaTempi")
-        .html(run_view.getTranslMessage('btSommaTempi'))
+        .html(run_view.getTranslMessage('msg__somma_i_tem'))
         .button().click(function () {
             run_view.somma_tempi();
             run_view.set_result_to('idSommaTempi');
         });
     $("#btSottrTempi")
-        .html(run_view.getTranslMessage('btSottrTempi'))
+        .html(run_view.getTranslMessage('msg__sottrae_i_t'))
         .button().click(function () {
             run_view.sottr_tempi();
             run_view.set_result_to('idSommaTempi');
         });
     $("#btRisSumInT1")
-        .html(run_view.getTranslMessage('btRisSumInT1'))
+        .html(run_view.getTranslMessage('msg__risultato_i'))
         .button().click(function () {
             run_view.partial_sum_in_t1();
         });
 
     // labels
-    $("#msgDis1").html(run_view.getTranslMessage('msgDis1'));
-    $("#msgTime1").html(run_view.getTranslMessage('msgTime1'));
-    $("#msgDis2").html(run_view.getTranslMessage('msgDis2'));
-    $("#msgVelAlKm").html(run_view.getTranslMessage('msgVelAlKm'));
-    $("#msgDis3").html(run_view.getTranslMessage('msgDis3'));
-    $("#msgVelKmh12").html(run_view.getTranslMessage('msgVelKmh12'));
-    $("#msgDis4Hm").html(run_view.getTranslMessage('msgDis4Hm'));
-    $("#msgVelAlkm1").html(run_view.getTranslMessage('msgVelAlkm1'));
+    $("#msgDis1").html(run_view.getTranslMessage('msg__distanza_es'));
+    $("#msgTime1").html(run_view.getTranslMessage('msg__tempo_es__0'));
+    $("#msgDis2").html(run_view.getTranslMessage('msg__distanza_es_1'));
+    $("#msgVelAlKm").html(run_view.getTranslMessage('msg__velocita_al'));
+    $("#msgDis3").html(run_view.getTranslMessage('msg__distanza_es'));
+    $("#msgVelKmh12").html(run_view.getTranslMessage('msg__velocita_al_1'));
+    $("#msgDis4Hm").html(run_view.getTranslMessage('msg__distanza_es_2'));
+    $("#msgVelAlkm1").html(run_view.getTranslMessage('msg__velocita_al_2'));
     $("#msgPassoOStep").html(run_view.getTranslMessage('msgPassoOStep'));
-    $("#msgPolsoMax").html(run_view.getTranslMessage('msgPolsoMax'));
-    $("#msgDist10km").html(run_view.getTranslMessage('msgDist10km'));
-    $("#msgTempo3736").html(run_view.getTranslMessage('msgTempo3736'));
-    $("#msgDistObbiet").html(run_view.getTranslMessage('msgDistObbiet'));
-    $("#msgVelTeo").html(run_view.getTranslMessage('msgVelTeo'));
-    $("#msgPassRealiPar").html(run_view.getTranslMessage('msgPassRealiPar'));
-    $("#msgT1").html(run_view.getTranslMessage('msgT1'));
-    $("#msgT2").html(run_view.getTranslMessage('msgT2'));
-    $("#msgRangeVelOpt").html(run_view.getTranslMessage('msgRangeVelOpt'));
+    $("#msgPolsoMax").html(run_view.getTranslMessage('msg__passo_o_ste'));
+    $("#msgDist10km").html(run_view.getTranslMessage('msg__distanza_es_3'));
+    $("#msgTempo3736").html(run_view.getTranslMessage('msg__tempo_es__0'));
+    $("#msgDistObbiet").html(run_view.getTranslMessage('msg__distanza_ob'));
+    $("#msgVelTeo").html(run_view.getTranslMessage('msg__velocita_te'));
+    $("#msgPassRealiPar").html(run_view.getTranslMessage('msg__dettaglio_p'));
+    $("#msgT1").html(run_view.getTranslMessage('msg__tempo_1'));
+    $("#msgT2").html(run_view.getTranslMessage('msg__tempo_2'));
+    $("#msgRangeVelOpt").html(run_view.getTranslMessage('msg__serie_di_ve'));
 
 
     $("#cmbDisteq").combobox();
@@ -160,20 +160,20 @@ $(document).ready(function () {
         modal: true,
         buttons: [
             {
-                text: 'Aggiungi',
+                text: run_view.getTranslMessage('msg__aggiungi'),
                 click: function () {
                     run_view.teoreal_add_new_item();
                 }
             },
             {
-                text: 'Ok',
+                text: run_view.getTranslMessage('msg__ok'),
                 click: function () {
                     $(this).dialog("close");
                     run_view.tabeff_in_ctrl();
                 }
             },
             {
-                text: 'Cancella',
+                text: run_view.getTranslMessage('msg__cancella'),
                 click: function () {
                     $(this).dialog("close");
                 }
@@ -190,14 +190,14 @@ $(document).ready(function () {
         modal: true,
         buttons: [
             {
-                text: 'Ok',
+                text: run_view.getTranslMessage('msg__ok'),
                 click: function () {
                     $(this).dialog("close");
                     run_view.tabeff_item_edit();
                 }
             },
             {
-                text: 'Cancella',
+                text: run_view.getTranslMessage('msg__cancella'),
                 click: function () {
                     run_view.teoreal_add_new_item_cancel();
                     $(this).dialog("close");
@@ -225,7 +225,7 @@ $(document).ready(function () {
         var dist = $('#txtDist1').val();
         var time = $('#txtTime1').val();
         $('#result').empty();
-        writeln_inresult('<p>Calcola velocità media per la distanza: ' + dist + ' Km nel tempo: ' + time);
+        writeln_inresult('<p>' + run_view.getTranslMessage('msg__calcola_vel_1') + dist + run_view.getTranslMessage('msg___km_nel_tem') + time);
         var ct = conv_tempi();
         var res = ct.vel_media_per_dist(dist, time);
         if (check_result(ct)) {
@@ -241,7 +241,7 @@ $(document).ready(function () {
         var dist = $('#txtDist2').val();
         var velmin = $('#txtVelMmSs1').val();
         $('#result').empty();
-        writeln_inresult('<p>Calcola tempo finale con una distanza: ' + dist + ' Km e velocità al km: ' + velmin + ' mm:ss');
+        writeln_inresult('<p>' + 'Calcola tempo finale con una distanza: ' + dist + ' Km e velocità al km: ' + velmin + ' mm:ss');
         var ct = conv_tempi();
         var res = ct.tempo_finale(dist, velmin);
         if (check_result(ct)) {
@@ -262,7 +262,7 @@ $(document).ready(function () {
         }
 
         $('#result').empty();
-        writeln_inresult('<p>Mostra tabella velocità per il range: ' + range_str);
+        writeln_inresult('<p>' + 'Mostra tabella velocità per il range: ' + range_str);
         var ct = conv_tempi();
         var res = ct.process_range_vel(input_range_arr);
         if (check_result(ct)) {
@@ -280,11 +280,11 @@ $(document).ready(function () {
         $('#result').empty();
 
         if (vel < 0.0 || dist < 0.0) {
-            writeln_inresult('<p> Sono accetabili solo valori positivi');
+            writeln_inresult('<p>' + 'Sono accetabili solo valori positivi');
             return;
         }
 
-        writeln_inresult('<p>Minuti corsi alla velocità ' + vel + ' Km/h per una distanza di ' + dist);
+        writeln_inresult('<p>' + 'Minuti corsi alla velocità ' + vel + ' Km/h per una distanza di ' + dist);
         minuti_corsi(vel, dist);
     }
 
@@ -295,10 +295,10 @@ $(document).ready(function () {
         $('#result').empty();
 
         if (dist_step < 0.0 || dist < 0.0) {
-            writeln_inresult('<p> Sono accetabili solo valori positivi');
+            writeln_inresult('<p>' + 'Sono accetabili solo valori positivi');
             return;
         }
-        writeln_inresult('<p>Tabella passaggi sui ' + dist + ' Km, con uno step di ' + dist_step + ' Km ed una velocità di: ' + tempo_mmss + ' mm:ss al Km <br/> ');
+        writeln_inresult('<p>' + 'Tabella passaggi sui ' + dist + ' Km, con uno step di ' + dist_step + ' Km ed una velocità di: ' + tempo_mmss + ' mm:ss al Km <br/> ');
         var ct = conv_tempi();
         var res = ct.tabella_per_dist(dist, tempo_mmss, dist_step);
         if (check_result(ct)) {
@@ -312,11 +312,11 @@ $(document).ready(function () {
         $('#result').empty();
 
         if (maxpuls > 250 || maxpuls < 50) {
-            writeln_inresult('<p> Valore battito massimo fuori soglia (50-250)');
+            writeln_inresult('<p>' + 'Valore battito massimo fuori soglia (50-250)');
             return;
         }
 
-        writeln_inresult('<p>Tabella percentuali polso ' + maxpuls + '<br/>');
+        writeln_inresult('<p>' + 'Tabella percentuali polso ' + maxpuls + '<br/>');
 
         var ct = conv_tempi();
         var res = ct.freq_puls_table(maxpuls);
@@ -331,7 +331,7 @@ $(document).ready(function () {
         var dist_goal = $('#cmbDisteq_goal').val();
         var tempo = $('#txtTime2').val();
         $('#result').empty();
-        writeln_inresult('<p>Calcola equivalenza di tempi per: ' + dist + ' con tempo ' + tempo + ' e ' + dist_goal + ' <br/>');
+        writeln_inresult('<p>' + 'Calcola equivalenza di tempi per: ' + dist + ' con tempo ' + tempo + ' e ' + dist_goal + ' <br/>');
         var ct = conv_tempi();
         var res = ct.equilval_tempi(dist, tempo, dist_goal);
         if (check_result(ct)) {
@@ -345,7 +345,7 @@ $(document).ready(function () {
         var detail_real_arr = detail_real_str.split(',');
         var tempo_mmss = $('#txtVelMmSs3').val();
         $('#result').empty();
-        writeln_inresult('<p>Tabella torico-reale velocità: ' + tempo_mmss + ' mm:ss al Km <br/>');
+        writeln_inresult('<p>' + 'Tabella torico-reale velocità: ' + tempo_mmss + ' mm:ss al Km <br/>');
         var ct = conv_tempi();
         var res = ct.confronta_tabella(tempo_mmss, detail_real_arr);
         if (check_result(ct)) {
@@ -496,7 +496,7 @@ $(document).ready(function () {
         var t1 = $('#txtVelMmSs4').val();
         var t2 = $('#txtVelMmSs5').val();
         $('#result').empty();
-        writeln_inresult('<p> Somma di ' + t1 + ' e ' + t2);
+        writeln_inresult('<p>' + 'Somma di ' + t1 + ' e ' + t2);
         var ct = conv_tempi();
         var res = ct.somma_tempi(t1, t2);
         if (check_result(ct)) {
@@ -511,7 +511,7 @@ $(document).ready(function () {
         var t1 = $('#txtVelMmSs4').val();
         var t2 = $('#txtVelMmSs5').val();
         $('#result').empty();
-        writeln_inresult('<p> Sottrazione: ' + t1 + ' - ' + t2);
+        writeln_inresult('<p>' + 'Sottrazione: ' + t1 + ' - ' + t2);
         var ct = conv_tempi();
         var res = ct.sottrae_tempi(t1, t2);
         if (check_result(ct)) {
@@ -588,7 +588,7 @@ $(document).ready(function () {
     // funzioni private
     var check_result = function (ct) {
         if (ct.error_info().is_error) {
-            writeln_inresult('<p>Errore nel calcolo: ' + ct.error_info().msg);
+            writeln_inresult('<p>' + 'Errore nel calcolo: ' + ct.error_info().msg);
             return false;
         }
         return true;

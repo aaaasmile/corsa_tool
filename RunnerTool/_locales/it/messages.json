@@ -6,6 +6,15 @@
         "message": "Strumenti utili per il bravo corridore.",
         "description": "Qualche funzione utile per calcolare velocità e tempi di percorrenza per il maratoneta."
     },
+    "btDist10k": {
+        "message": "10Km"
+    },
+    "btDist5k": {
+        "message": "5Km"
+    },
+    "btDist1k": {
+        "message": "1Km"
+    },
     "msg__calcola_vel": {
         "message": "Calcola velocità  media per la distanza: ",
         "_orig": "Calcola velocità  media per la distanza: "
@@ -262,6 +271,5 @@
         "message": "Pulsazioni",
         "_orig": "Pulsazioni"
     }
-
 }
 
