@@ -138,7 +138,7 @@ $(document).ready(function () {
     $("#msgDis4Hm").html(run_view.getTranslMessage('msg__distanza_es_2'));
     $("#msgVelAlkm1").html(run_view.getTranslMessage('msg__velocita_al_2'));
     $("#msgPassoOStep").html(run_view.getTranslMessage('msg__passo_o_ste'));
-    $("#msgPolsoMax").html(run_view.getTranslMessage('msg__passo_o_ste'));
+    $("#msgPolsoMax").html(run_view.getTranslMessage('custmsg_polsomax'));
     $("#msgDist10km").html(run_view.getTranslMessage('msg__distanza_es_3'));
     $("#msgTempo3736").html(run_view.getTranslMessage('msg__tempo_es__0'));
     $("#msgDistObbiet").html(run_view.getTranslMessage('msg__distanza_ob'));
@@ -242,7 +242,7 @@ $(document).ready(function () {
         var dist = $('#txtDist2').val();
         var velmin = $('#txtVelMmSs1').val();
         $('#result').empty();
-        writeln_inresult('<p>' + run_view.getTranslMessage('msg__calcola_tem_1') + dist + run_view.getTranslMessage('msg___km_nel_tem') + velmin + ' mm:ss');
+        writeln_inresult('<p>' + run_view.getTranslMessage('msg__calcola_tem_1') + dist + run_view.getTranslMessage('custmsg___km_nel_tem2') + velmin + ' min/km');
         var ct = conv_tempi();
         var res = ct.tempo_finale(dist, velmin);
         if (check_result(ct)) {
@@ -689,7 +689,7 @@ $(document).ready(function () {
 
     var show_table = function (time_arr) {
         var linehtml = "<table cellpadding=\"5\" cellspacing=\"5\">";
-        linehtml = linehtml.concat("<th>Km/h</th><th>mm:ss</th>");
+        linehtml = linehtml.concat("<th>Km/h</th><th>Min/km</th>");
         for (var i = 0; i < time_arr.length; i++) {
             var line = time_arr[i], col1, col3;
             col1 = make_fix_col(line.vel_km, 6);

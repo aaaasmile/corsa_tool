@@ -15,6 +15,15 @@
     "btDist1k": {
         "message": "1Km"
     },
+    "custmsg___km_nel_tem2": {
+        "message": " Km nel tempo: ",
+        "_orig": " Km nel tempo: "
+    },
+    "custmsg_polsomax": {
+        "message": "Polso massimo",
+        "_orig": "Polso massimo"
+    },
+    
     "msg__calcola_vel": {
         "message": "Calcola velocità  media per la distanza: ",
         "_orig": "Calcola velocità  media per la distanza: "
@@ -88,7 +97,7 @@
         "_orig": "Tempo 2"
     },
     "msg__dettaglio_p": {
-        "message": "Dettaglio passaggi reali con elementi separati da virgola, singolo elemento (km e tempo in hh:mm:ss) separato da punto e virgola. Esempio maratona di Roma [\"5;0:30:16,10;0:57:37, 15;1:24:29, 21.097;1:56:56, 25;2:17:29,30;2:44:08,35;3:10:18, 40;3:38:18, 42.2;3:50:16\"",
+        "message": "Dettaglio passaggi reali con elementi separati da virgola, singolo elemento (km e tempo in hh:mm:ss) separato da punto e virgola. Esempio maratona di Roma [\"5;0:30:16,10;0:57:37, 15;1:24:29, 21.097;1:56:56, 25;2:17:29,30;2:44:08,35;3:10:18, 40;3:38:18, 42.2;3:50:16\"]",
         "_orig": "Dettaglio passaggi reali con elementi separati da virgola, singolo elemento (km e tempo in hh:mm:ss) separato da punto e virgola. Esempio maratona di Roma [\"5;0:30:16,10;0:57:37, 15;1:24:29, 21.097;1:56:56, 25;2:17:29,30;2:44:08,35;3:10:18, 40;3:38:18, 42.2;3:50:16\""
     },
     "msg__velocita_te": {
