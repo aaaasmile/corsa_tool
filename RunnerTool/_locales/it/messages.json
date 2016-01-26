@@ -153,8 +153,8 @@
         "_orig": "Distanza (es \"10km\")"
     },
     "msg__distanza_ob": {
-        "message": "Distanza Obbiettivo (es \"42 km\")",
-        "_orig": "Distanza Obbiettivo (es \"42 km\")"
+        "message": "Distanza Obbiettivo (es \"42.2 km\")",
+        "_orig": "Distanza Obbiettivo (es \"42.2 km\")"
     },
     "msg__aggiungi": {
         "message": "Aggiungi",

@@ -102,11 +102,11 @@
         "_orig": "Funzioni utili per il corridore"
     },
     "msg__distanza_es": {
-        "message": "Entfernung (z.B. \"5.1\") in Kilometern",
+        "message": "Distanz (z.B. \"5.1\") in Kilometern",
         "_orig": "Distanza (es \"5.1\") in Km"
     },
     "msg__distanza_es_1": {
-        "message": "Entfernung (z.B. \"42,2 \") in Kilometern",
+        "message": "Distanz (z.B. \"42.2\") in Kilometern",
         "_orig": "Distanza (es \"42.2\") in Km"
     },
     "msg__tempo_es__0": {
@@ -126,7 +126,7 @@
         "_orig": "Velocità al Km (es. \"12\") in Km/h"
     },
     "msg__distanza_es_2": {
-        "message": "Entfernung (z.B. \"21.1\") in Kilometern",
+        "message": "Distanz (z.B. \"21.1\") in Kilometern",
         "_orig": "Distanza (es. \"21.1\") in Km"
     },
     "msg__velocita_al_2": {
@@ -142,7 +142,7 @@
         "_orig": "Polso massimo"
     },
     "msg__distanza_es_3": {
-        "message": "Entfernung (z.B. \"10km\")",
+        "message": "Gelaufene Distanz (z.B. \"10km\")",
         "_orig": "Distanza (es \"10km\")"
     },
     "msg__tempo_es__0_1": {
@@ -150,8 +150,8 @@
         "_orig": "Tempo (es. \"00:37:36\") in hh:mm:ss"
     },
     "msg__distanza_ob": {
-        "message": "Renndistanz (z.B. \"42 km\")",
-        "_orig": "Distanza Obbiettivo (es \"42 km\")"
+        "message": "Renndistanz (z.B. \"42.2 km\")",
+        "_orig": "Distanza Obbiettivo (es \"42.2 km\")"
     },
     "msg__aggiungi": {
         "message": "Hinzufügen",
@@ -174,7 +174,7 @@
         "_orig": " Km nel tempo: "
     },
     "msg__calcola_tem_2": {
-        "message": "Es berechnet Endzeit mit einer Entfernung: ",
+        "message": "Es berechnet Endzeit mit einer Distanz: ",
         "_orig": "Calcola tempo finale con una distanza:  "
     },
     "msg___km_e_veloc": {
@@ -222,11 +222,11 @@
         "_orig": "Tabella percentuali polso "
     },
     "msg__calcola_equ": {
-        "message": "Berechnet die Zeit-Äquivalenz für: ",
+        "message": "Berechnet die Zeit-Äquivalenz zwieschen ",
         "_orig": "Calcola equivalenza di tempi per: "
     },
     "msg___con_tempo_": {
-        "message": " mit Zeit ",
+        "message": " mit Endzeit ",
         "_orig": " con tempo "
     },
     "msg___e_": {
