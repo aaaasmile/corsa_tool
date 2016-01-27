@@ -569,8 +569,8 @@ $(document).ready(function () {
     }
 
     var _defaults = {
-        distance: "10.0", time: "00:48:20", rangevel: '10,11,12,13,14,15', time_hm: "01:45:40",
-        velocity: 10.2, time_mmss: "05:00", distance_step: 5.0, max_puls: 197,
+        distance: "42.195", time: "03:59:59", rangevel: '8,9,10,11,12,13,14,15', time_hm: "01:45:40",
+        velocity: 10.2, time_mmss: "05:41", distance_step: 5.0, max_puls: 197,
         dist_eq: 'HM', dist_goal: 'MT',
         detail_real: '5; 0:24:11, 10; 0:48:22, 15; 01:12:42, 20;01:37:20,  21.1;1:42:46, 26.1;2:07:12, 31.1;02:31:11, 36.1;02:56:30, 41.1;03:26:11, 42.2; 3:33:07',
         partial_sum: ''
