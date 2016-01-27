@@ -53,6 +53,24 @@
         "message": " soll im Format hh:mm:ss sein",
         "_orig": " va messo in formato hh:mm:ss"
     },
+
+    "msgl1__comandi": {
+        "message": "Befehle",
+        "_orig": "Comandi"
+    },
+    "msgl1__tempo": {
+        "message": "Zeit",
+        "_orig": "Tempo"
+    },
+    "msgl1__tabella_dat": {
+        "message": "Ist-Tabelle",
+        "_orig": "Tabella dati reali"
+    },
+    "msgl1__tempo_effet": {
+        "message": "Ist-Zeit",
+        "_orig": "Tempo effettivo"
+    },
+
     "msg__calcola_vel": {
         "message": "Durchschnittsgeschwindigkeit für die Strecke: ",
         "_orig": "Calcola velocità  media per la distanza: "
@@ -194,7 +212,7 @@
         "_orig": "Distanza Obbiettivo (es \"42.2 km\")"
     },
     "msg__aggiungi": {
-        "message": "Hinzufügen",
+        "message": "Neu",
         "_orig": "Aggiungi"
     },
     "msg__ok": {
@@ -226,7 +244,7 @@
         "_orig": "Mostra tabella velocità  per il range: "
     },
     "msg__sono_acceta": {
-        "message": "Nur positive Werte sind benutzbar",
+        "message": "Nur positive Werte sind erlaubt",
         "_orig": "Sono accetabili solo valori positivi"
     },
     "msg__minuti_cors": {

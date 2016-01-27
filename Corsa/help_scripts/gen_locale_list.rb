@@ -30,16 +30,24 @@ class Generator
     @agent.set_proxy('172.28.0.53', '3128')
   end
   
+  def create_single(msg_det, lang_id = "it")
+    @log.debug("Processing '#{msg_det}', language '#{lang_id}''")
+    template_item = get_template_item
+    result = ""
+    template = ERB.new(template_item)
+    name_lbl = get_label_name(msg_det, 'msgl1')
+    tmp_arr = translate_msg_det_and_original_text(msg_det, lang_id)
+    original_text = tmp_arr[0]
+    msg_det = tmp_arr[1]
+    aString = template.result(binding)
+    result += aString
+    copy_to_clipboard(result)
+  end
+  
   def run(string_list_fname, lang_id = "it")
     @log.debug "Processing the file #{string_list_fname}"
-    template_item = 
-<<-LIST
-    "<%= name_lbl %>": {
-        "message": "<%= msg_det %>",
-        "_orig": "<%= original_text %>"
-    },
-LIST
-    
+
+    template_item = get_template_item
     result = ",\n"
     template = ERB.new(template_item)
     
@@ -64,33 +72,31 @@ LIST
       #       msg_det.encode('utf-8').encode is silently not working because a converter is missed 
       #       and in this case Iconv.conv is used instead
       
-      luz_trans = msg_det
-      if lang_id != @source_lang_id 
-        luz_trans = transalte(msg_det, lang_id)
-      end
-      if RUBY_VERSION != "1.8.6"
-        original_text = Iconv.conv('utf-8', 'ISO-8859-1', msg_det)
-        msg_det = Iconv.conv('utf-8', 'ISO-8859-1',  luz_trans) #Iconv.new(to, from)
-      else
-        original_text = msg_det
-        msg_det = luz_trans
-      end
+      tmp_arr = translate_msg_det_and_original_text(msg_det, lang_id)
+      original_text = tmp_arr[0]
+      msg_det = tmp_arr[1]
       
       labels[name_lbl] = {:content => msg_det, :count => 1}
       
       aString = template.result(binding)
       result += aString
     end
-    puts result
-    if RUBY_VERSION == "2.1.7"
-      Clipboard.copy(result)
-    else
-      Clipboard.set_data result
-    end
+    copy_to_clipboard(result)
     
   end
 
   private 
+  
+  def get_template_item
+        template_item = 
+<<-LIST
+    "<%= name_lbl %>": {
+        "message": "<%= msg_det %>",
+        "_orig": "<%= original_text %>"
+    },
+LIST
+    return template_item
+  end
  
   def transalte(text_to_transl, lang_id)
     result = text_to_transl
@@ -140,15 +146,39 @@ LIST
     @url_compl = "https://translate.google.com"
   end
   
-  def get_label_name(msg_det)
+  def get_label_name(msg_det, prefix = 'msg')
     if RUBY_VERSION != "1.8.6"
       msg_det = Iconv.conv('utf-8', 'ISO-8859-1', msg_det)
     end
     lblname_candidate = msg_det.gsub(' ', '_').downcase.gsub(':', '_').gsub('\\', '_').gsub(',', '').gsub('/', '_').gsub('(', '').gsub('.','').gsub('à', 'a').gsub('è', 'e').gsub('ù', 'u').gsub('ò', 'o').gsub('"', '')
     lblname_candidate = lblname_candidate[0..10] if lblname_candidate.length > 10
     name_lbl = lblname_candidate
-    name_lbl = "msg__#{lblname_candidate}"
+    name_lbl = "#{prefix}__#{lblname_candidate}"
     return name_lbl
+  end
+  
+  def translate_msg_det_and_original_text(msg_det, lang_id)
+    luz_trans = msg_det
+    if lang_id != @source_lang_id 
+      luz_trans = transalte(msg_det, lang_id)
+    end
+    if RUBY_VERSION != "1.8.6"
+      original_text = Iconv.conv('utf-8', 'ISO-8859-1', msg_det)
+      msg_det = Iconv.conv('utf-8', 'ISO-8859-1',  luz_trans) #Iconv.new(to, from)
+    else
+      original_text = msg_det
+      msg_det = luz_trans
+    end
+    return [original_text, msg_det]
+  end
+  
+  def copy_to_clipboard(result)
+    puts result
+    if RUBY_VERSION == "2.1.7"
+      Clipboard.copy(result)
+    else
+      Clipboard.set_data result
+    end
   end
   
 end
@@ -158,6 +188,8 @@ if $0 == __FILE__
   # NOTE: to build the list, copied into the clipboard, user ruby 1.9.3. For developement it is enough the 1.8.6.
   fname = File.dirname(__FILE__) + "/string_list.txt"
   gen = Generator.new
-  gen.run(fname, 'en')
+  #gen.run(fname, 'en')
+  gen.create_single('Tempo effettivo', 'it')
+  
   
 end

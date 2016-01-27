@@ -64,7 +64,26 @@
         "message": " va messo in formato hh:mm:ss",
         "_orig": " va messo in formato hh:mm:ss"
     },
-    
+
+    "msgl1__comandi": {
+        "message": "Comandi",
+        "_orig": "Comandi"
+    },
+    "msgl1__tempo": {
+        "message": "Tempo",
+        "_orig": "Tempo"
+    },
+    "msgl1__tabella_dat": {
+        "message": "Tabella dati reali",
+        "_orig": "Tabella dati reali"
+    },
+    "msgl1__tempo_effet": {
+        "message": "Tempo effettivo",
+        "_orig": "Tempo effettivo"
+    },
+
+
+
     "msg__calcola_vel": {
         "message": "Calcola velocità  media per la distanza: ",
         "_orig": "Calcola velocità  media per la distanza: "
@@ -322,4 +341,3 @@
         "_orig": "Pulsazioni"
     }
 }
-

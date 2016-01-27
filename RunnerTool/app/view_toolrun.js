@@ -148,9 +148,9 @@ $(document).ready(function () {
     $("#msgT2").html(run_view.getTranslMessage('msg__tempo_2'));
     $("#msgRangeVelOpt").html(run_view.getTranslMessage('msg__serie_di_ve'));
     $("#msgFunUtil").html(run_view.getTranslMessage('msg__funzioni_ut'));
-    $("#tbCmdLabel").html(run_view.getTranslMessage('Comandi')); // ISS TODO
-    $("#tbCmdTempo").html(run_view.getTranslMessage('Tempo'));// ISS TODO
-    $("#tbCmdTempo2").html(run_view.getTranslMessage('Tempo'));// ISS TODO
+    $("#tbCmdLabel").html(run_view.getTranslMessage('msgl1__comandi'));
+    $("#tbCmdTempo").html(run_view.getTranslMessage('msgl1__tempo'));
+    $("#tbCmdTempo2").html(run_view.getTranslMessage('msgl1__tempo'));
    
     $("#cmbDisteq").combobox();
     $("#cmbDisteq_goal").combobox();
@@ -161,7 +161,7 @@ $(document).ready(function () {
         height: 450,
         width: 390,
         modal: true,
-        title: run_view.getTranslMessage('Tabella dati reali'),// ISS TODO
+        title: run_view.getTranslMessage('msgl1__tabella_dat'),
         buttons: [
             {
                 text: run_view.getTranslMessage('msg__aggiungi'),
@@ -192,7 +192,7 @@ $(document).ready(function () {
         height: 200,
         width: 300,
         modal: true,
-        title: run_view.getTranslMessage('Tempo effettivo'),// ISS TODO
+        title: run_view.getTranslMessage('msgl1__tempo_effet'),
         buttons: [
             {
                 text: run_view.getTranslMessage('msg__ok'),
@@ -378,12 +378,13 @@ $(document).ready(function () {
         // empty the table  body to avoid reappend data
         $('#terealBody').empty();
         // need an element otherwise list can't work...
-        $('#terealBody').append("<tr> \
-            <td class=\"edit\"><button class=\"edit-item-btn\">Modifica</button></td> \
-            <td class=\"remove\"><button class=\"remove-item-btn\">Rimuovi</button></td> \
-            <td class=\"id\" style=\"display:none;\">1</td> \
+        var str = "<tr>";
+        str += "<td class=\"edit\"><button class=\"edit-item-btn\">" + run_view.getTranslMessage('msg__modifica') + "</button></td>";
+        str += "<td class=\"remove\"><button class=\"remove-item-btn\">" + run_view.getTranslMessage('msg__rimuovi') + "</button></td>";
+        str += "<td class=\"id\" style=\"display:none;\">1</td> \
             <td class=\"dist\">5</td> \
-            <td class=\"tempo\">0:24:11</td></tr>");
+            <td class=\"tempo\">0:24:11</td></tr>";
+        $('#terealBody').append(str);
         // List coud be created only if html is ready and it is populated using current dom
         _teorealDataList = new List('teoRealData', teorelTemplates);
         teoreal_add_data_from_teoCtrl();
