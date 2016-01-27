@@ -1,12 +1,89 @@
 ﻿{
     "appName": {
-        "message": "Corsa Tools"
+        "message": "Runner Tools"
     },
     "appDesc": {
         "message": "Usefull tools for the keen runner"
     },
+
+    "btDist10k": {
+        "message": "10Km"
+    },
+    "btDist5k": {
+        "message": "5Km"
+    },
+    "btDist1k": {
+        "message": "1Km"
+    },
+    "custmsg___km_nel_tem2": {
+        "message": " Km and time: ",
+        "_orig": " Km nel tempo: "
+    },
+    "custmsg_polsomax": {
+        "message": "Maximum heart rate",
+        "_orig": "Polso massimo"
+    },
+    "custmsg_err_nel_formato": {
+        "message": "Format error ",
+        "_orig": "Errore nel formato "
+    },
+    "custmsg_aspetto_una_stringa": {
+        "message": ", expects a string in format mm:ss",
+        "_orig": ", aspetto una stringa come mm:ss"
+    },
+
+    "custmsg_ore_minuti_secondi": {
+        "message": "Hours, minutes or seconds are out of range (",
+        "_orig": "Ore, minuti o secondi non sono in range ("
+    },
+    "custmsg_minuti_o_secondi": {
+        "message": "minutes or seconds are out of range (",
+        "_orig": "minuti o secondi non sono in range ("
+    },
+    "custmsg_formato_del_tempo_non": {
+        "message": "Time format not correct for",
+        "_orig": "Formato del tempo non corretto per"
+    },
+    "custmsg_errore_formato_equiv": {
+        "message": "Format error in equivalence calculation, distance not recognized",
+        "_orig": "Errore formato equivalenza distanze non riconosciuto"
+    },
+    "custmsg_errore_nel_formato_di": {
+        "message": "Format error on ",
+        "_orig": "Errore nel formato di "
+    },
+    "custmsg_il_separatore_va_mes": {
+        "message": ", the separator character ;  should be between km and time",
+        "_orig": ", il separatore ;  va messo tra il km e il tempo"
+    },
+    "custmsg_il_tempo": {
+        "message": ", the time ",
+        "_orig": ", il tempo "
+    },
+    "custmsg_va_messo": {
+        "message": " need to be in format hh:mm:ss",
+        "_orig": " va messo in formato hh:mm:ss"
+    },
+
+    "msgl1__comandi": {
+        "message": "Cammands",
+        "_orig": "Comandi"
+    },
+    "msgl1__tempo": {
+        "message": "Time",
+        "_orig": "Tempo"
+    },
+    "msgl1__tabella_dat": {
+        "message": "Table real data",
+        "_orig": "Tabella dati reali"
+    },
+    "msgl1__tempo_effet": {
+        "message": "Real time",
+        "_orig": "Tempo effettivo"
+    },
+
     "msg__calcola_vel": {
-        "message": "Average for the distance:",
+        "message": "Speed average for the distance: ",
         "_orig": "Calcola velocità  media per la distanza: "
     },
     "msg__mezza_marat": {
@@ -14,7 +91,7 @@
         "_orig": "Mezza Maratona"
     },
     "msg__cancella_ri": {
-        "message": "Remove result",
+        "message": "Clear result",
         "_orig": "Cancella risultato"
     },
     "msg__calcola_med": {
@@ -22,31 +99,31 @@
         "_orig": "Calcola media"
     },
     "msg__calcola_tem": {
-        "message": "Calculates final time",
+        "message": "Compute End time",
         "_orig": "Calcola tempo finale"
     },
     "msg__converti_ve": {
-        "message": "Convert speed?",
+        "message": "Convert speed",
         "_orig": "Converti velocità"
     },
     "msg__calcola_tem_1": {
-        "message": "Calculates final time",
+        "message": "Compute end time",
         "_orig": "Calcola tempo finale"
     },
     "msg__tabella_pas": {
-        "message": "Table steps",
+        "message": "Split times table",
         "_orig": "Tabella passaggi"
     },
     "msg__percentuali": {
-        "message": "Percentages maximum pulse",
+        "message": "Percentages maximum heart rate",
         "_orig": "Percentuali polso massimo"
     },
     "msg__equivalenza": {
-        "message": "Equivalence times",
+        "message": "Race time calculator",
         "_orig": "Equivalenza tempi"
     },
     "msg__tabella_teo": {
-        "message": "Table Real theoretical",
+        "message": "Table target-performance",
         "_orig": "Tabella teorico reale"
     },
     "msg__cambia_dett": {
@@ -82,59 +159,59 @@
         "_orig": "Tempo 2"
     },
     "msg__dettaglio_p": {
-        "message": ": 44: 08.35; 3: 10: 18, 40; 3: 38: 18, 42.2; 3: 50: 16 \"",
+        "message": "Comma separated values. Each value is pair, distance and a time, separated by a semicolon (e.g. 5; 0:24:11). Example for Rome marathon result: [\"5;0:30:16,10;0:57:37, 15;1:24:29, 21.097;1:56:56, 25;2:17:29,30;2:44:08,35;3:10:18, 40;3:38:18, 42.2;3:50:16\"]",
         "_orig": "Dettaglio passaggi reali con elementi separati da virgola, singolo elemento (km e tempo in hh:mm:ss) separato da punto e virgola. Esempio maratona di Roma [\"5;0:30:16,10;0:57:37, 15;1:24:29, 21.097;1:56:56, 25;2:17:29,30;2:44:08,35;3:10:18, 40;3:38:18, 42.2;3:50:16\""
     },
     "msg__velocita_te": {
-        "message": "Theoretical Km (eg. \"5: 27 \") in mm: ss",
+        "message": "Target speed (e.g. \"5:27\") min/km",
         "_orig": "Velocità teorica al Km (es. \"5:27\") in mm:ss"
     },
     "msg__funzioni_ut": {
-        "message": "Functions to be runner",
+        "message": "Runner's Tools",
         "_orig": "Funzioni utili per il corridore"
     },
     "msg__distanza_es": {
-        "message": "Distance (eg \"5.1 \") in kilometers",
+        "message": "Distance (e.g. \"5.1\") in kilometers",
         "_orig": "Distanza (es \"5.1\") in Km"
     },
     "msg__distanza_es_1": {
-        "message": "Distance (eg \"42.2 \") in kilometers",
+        "message": "Distance (e.g. \"42.2\") in kilometers",
         "_orig": "Distanza (es \"42.2\") in Km"
     },
     "msg__tempo_es__0": {
-        "message": "Time (eg. \"00: 37: 36 \") in hh: mm: ss",
+        "message": "Time (e.g. \"00:37:36\") in hh:mm:ss",
         "_orig": "Tempo (es. \"00:37:36\") in hh:mm:ss"
     },
     "msg__velocita_al": {
-        "message": "at Km (eg. \"04: 36 \") in mm: ss",
+        "message": "speed (e.g. \"04:36\") min/km",
         "_orig": "velocità al Km (es. \"04:36\") in mm:ss"
     },
     "msg__serie_di_ve": {
-        "message": "in Km / h (eg. \"10,10.2,11.3,11.5,12.9 \")",
+        "message": "Speeds in Km/h (e.g. \"10,10.2,11.3,11.5,12.9\")",
         "_orig": "Serie di velocità in Km/h (es. \"10,10.2,11.3,11.5,12.9\")"
     },
     "msg__velocita_al_1": {
-        "message": "at Km (eg. \"12 \") in km / h",
+        "message": "Speed (e.g. \"12\") in km/h",
         "_orig": "Velocità al Km (es. \"12\") in Km/h"
     },
     "msg__distanza_es_2": {
-        "message": "Distance (eg. \"21.1 \") in kilometers",
+        "message": "Distance (e.g. \"21.1\") in kilometers",
         "_orig": "Distanza (es. \"21.1\") in Km"
     },
     "msg__velocita_al_2": {
-        "message": "at Km (eg. \"5: 27 \") in mm: ss",
+        "message": "speed (e.g. \"5:27\") in min/km",
         "_orig": "velocità al Km (es. \"5:27\") in mm:ss"
     },
     "msg__passo_o_ste": {
-        "message": "step or step (eg. \"5 \") in kilometers",
+        "message": "step (e.g. \"5\") in kilometers",
         "_orig": "passo o step (es. \"5\") in Km"
     },
     "msg__polso_massi": {
-        "message": "Maximum pulse",
+        "message": "Maximum heart beat",
         "_orig": "Polso massimo"
     },
     "msg__distanza_es_3": {
-        "message": "Distance (eg \"10km \")",
+        "message": "Distance (e.g. \"10km\")",
         "_orig": "Distanza (es \"10km\")"
     },
     "msg__tempo_es__0_1": {
@@ -154,111 +231,111 @@
         "_orig": "Ok"
     },
     "msg__cancella": {
-        "message": "Clear",
+        "message": "Cancel",
         "_orig": "Cancella"
     },
     "msg__calcola_vel_1": {
-        "message": "Average for the distance:",
+        "message": "Speed average for the distance: ",
         "_orig": "Calcola velocità  media per la distanza: "
     },
     "msg___km_nel_tem": {
-        "message": "Km in time:",
+        "message": "Km and time: ",
         "_orig": " Km nel tempo: "
     },
     "msg__calcola_tem_2": {
-        "message": "Calculates final time with a distance:",
+        "message": "Calculates end time with a distance: ",
         "_orig": "Calcola tempo finale con una distanza:  "
     },
     "msg___km_e_veloc": {
-        "message": "at km:",
+        "message": "Km and speed in min/km: ",
         "_orig": " Km e velocità  al km:  "
     },
     "msg__mostra_tabe": {
-        "message": "for the range:",
+        "message": "Speed table for the serie: ",
         "_orig": "Mostra tabella velocità  per il range: "
     },
     "msg__sono_acceta": {
-        "message": "Only positive values are extremely reasonable",
+        "message": "Only positive values are allowed",
         "_orig": "Sono accetabili solo valori positivi"
     },
     "msg__minuti_cors": {
-        "message": "Minutes courses to speed ??",
+        "message": "Minutes ran at speed ",
         "_orig": "Minuti corsi alla velocità  "
     },
     "msg___km_h_per_u": {
-        "message": "Km / h for a distance of",
+        "message": " Km/h for a distance of ",
         "_orig": " Km/h per una distanza di "
     },
     "msg__tabella_pas_1": {
-        "message": "Table steps on",
+        "message": "Splits table steps of ",
         "_orig": "Tabella passaggi sui "
     },
     "msg___km_con_uno": {
-        "message": "Km, with a step of",
+        "message": "Km, with a step of ",
         "_orig": " Km, con uno step di "
     },
     "msg___km_ed_una_": {
-        "message": "of:",
+        "message": "Km and speed of: ",
         "_orig": " Km ed una velocità  di: "
     },
     "msg___mm_ss_al_k": {
-        "message": "mm: ss to Km",
+        "message": " min/km",
         "_orig": " mm:ss al Km"
     },
     "msg__valore_batt": {
-        "message": "Beat maximum value out of range (50-250)",
+        "message": "Maximum heart beat value out of range (50-250)",
         "_orig": "Valore battito massimo fuori soglia (50-250)"
     },
     "msg__tabella_per": {
-        "message": "Table percentages wrist",
+        "message": "Table percentages heart beat",
         "_orig": "Tabella percentuali polso "
     },
     "msg__calcola_equ": {
-        "message": "Computes equivalence of time for:",
+        "message": "Computes equivalence of time for: ",
         "_orig": "Calcola equivalenza di tempi per: "
     },
     "msg___con_tempo_": {
-        "message": "with time",
+        "message": " with time",
         "_orig": " con tempo "
     },
     "msg___e_": {
-        "message": "is",
+        "message": " and ",
         "_orig": " e "
     },
     "msg__tabella_tor": {
-        "message": "Table toric-speed real ??:",
-        "_orig": "Tabella torico-reale velocità : "
+        "message": "Table Target/Performed: ",
+        "_orig": "Tabella teorico-reale velocità : "
     },
     "msg___mm_ss_al_k_1": {
-        "message": "mm: ss to Km",
+        "message": " min/km ",
         "_orig": " mm:ss al Km "
     },
     "msg__modifica": {
-        "message": "Modification",
+        "message": "Modify",
         "_orig": "Modifica"
     },
     "msg__rimuovi": {
-        "message": "Remove",
+        "message": "Delete",
         "_orig": "Rimuovi"
     },
     "msg___somma_di_": {
-        "message": "Sum of",
+        "message": " Sum of ",
         "_orig": " Somma di "
     },
     "msg___sottrazion": {
-        "message": "Subtraction:",
+        "message": " Subtraction: ",
         "_orig": " Sottrazione: "
     },
     "msg__errore_nel_": {
-        "message": "Calculation error:",
+        "message": "Calculation error: ",
         "_orig": "Errore nel calcolo: "
     },
     "msg__teorico": {
-        "message": "Theoretical",
+        "message": "Target",
         "_orig": "Teorico"
     },
     "msg__reale": {
-        "message": "REAL",
+        "message": "PERFORMED",
         "_orig": "REALE"
     },
     "msg__delta": {
@@ -266,7 +343,7 @@
         "_orig": "Delta"
     },
     "msg__pulsazioni": {
-        "message": "Pulsation",
+        "message": "Heart beats",
         "_orig": "Pulsazioni"
     },
     "msg__cambia_dett_1": {

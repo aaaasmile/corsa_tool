@@ -2,7 +2,7 @@
     "name": "__MSG_appName__",
     "manifest_version": 2,
     "description": "__MSG_appDesc__",
-    "default_locale": "it",
+    "default_locale": "en",
     "version": "5.2.3.0",
     "app": {
         "background": {
