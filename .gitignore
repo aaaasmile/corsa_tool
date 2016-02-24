@@ -5,3 +5,8 @@
 *.suo
 *.config
 RunnerTool.zip
+/screenshots/Thumbs.db
+/screenshots/runner_tools_it.png
+/screenshots/runner_tools_en_640_800.png
+/screenshots/runner_tools_en.png
+/screenshots/runner_tools_de.png
