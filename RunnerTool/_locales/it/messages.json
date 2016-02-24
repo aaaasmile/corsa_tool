@@ -333,8 +333,12 @@
         "_orig": "REALE"
     },
     "msg__delta": {
-        "message": "Delta",
-        "_orig": "Delta"
+      "message": "Delta",
+      "_orig": "Delta"
+    },
+    "msgl1__previous_ti": {
+        "message": "Tempo precedente",
+        "_orig": "Previous Time"
     },
     "msg__pulsazioni": {
         "message": "Pulsazioni",

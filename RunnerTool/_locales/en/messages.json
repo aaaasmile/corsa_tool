@@ -351,8 +351,11 @@
         "_orig": "Cambia dettagli"
     },
     "msg__nuovi_dati_1": {
-        "message": "New data",
-        "_orig": "Nuovi dati"
-    }
-
+      "message": "New data",
+      "_orig": "Nuovi dati"
+    },
+    "msgl1__previous_ti": {
+          "message": "Previous Time",
+          "_orig": "Previous Time"
+      }
 }

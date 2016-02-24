@@ -189,6 +189,20 @@ function List(id, options, values) {
         }
     };
 
+    // ISS get_last
+    this.get_last = function () {
+        var matchedItems = self.items;
+        matchedItems = matchedItems || [];
+        var last_ix = self.items.length - 1;
+        if (matchedItems.length == 0) {
+            return null;
+        } else if (matchedItems.length == 1) {
+            return matchedItems[0];
+        } else {
+            return matchedItems[last_ix];
+        }
+    }
+
     /* Sorts the list.
     * @valueOrEvent Either a JavaScript event object or a valueName
     * @sortFunction (optional) Define if natural sorting does not fullfill your needs

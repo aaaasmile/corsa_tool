@@ -127,6 +127,10 @@ $(document).ready(function () {
         .button().click(function () {
             run_view.partial_sum_in_t1();
         });
+    $("#btSumLastTime")
+        .button().click(function () {
+            run_view.teoreal_sum_relative_to_previoustime();
+        });
 
     // labels
     $("#msgDis1").html(run_view.getTranslMessage('msg__distanza_es'));
@@ -151,15 +155,17 @@ $(document).ready(function () {
     $("#tbCmdLabel").html(run_view.getTranslMessage('msgl1__comandi'));
     $("#tbCmdTempo").html(run_view.getTranslMessage('msgl1__tempo'));
     $("#tbCmdTempo2").html(run_view.getTranslMessage('msgl1__tempo'));
+    $("#tbLastTimeLbl").html(run_view.getTranslMessage('msgl1__previous_ti'));
    
+
     $("#cmbDisteq").combobox();
     $("#cmbDisteq_goal").combobox();
 
     // dialogo della lista tempi effettivi
     $("#dialog-form-teoreal").dialog({
         autoOpen: false,
-        height: 450,
-        width: 390,
+        height: 540,
+        width: 310,
         modal: true,
         title: run_view.getTranslMessage('msgl1__tabella_dat'),
         buttons: [
@@ -190,7 +196,7 @@ $(document).ready(function () {
     $("#dialog-form-edit-eff").dialog({
         autoOpen: false,
         height: 200,
-        width: 300,
+        width: 400,
         modal: true,
         title: run_view.getTranslMessage('msgl1__tempo_effet'),
         buttons: [
@@ -394,14 +400,46 @@ $(document).ready(function () {
         $("#dialog-form-teoreal").dialog("open");
     }
 
-    // create a new item to be edit by user for the teoreal list
+    // create a new item and edit it inside a dialogbox
     run_view.teoreal_add_new_item = function () {
         var idnew = _teorealDataList.size() + _teoreal_initial_id;
-        _teorealDataList.add({ id: idnew, dist: 2.0, tempo: '00:12:00' });
+        var last_item = _teorealDataList.get_last();
+        var new_item_default = { id: idnew, dist: 5.0, tempo: '00:24:30' };
+        var def_relative_time = "25:30";
+        if(last_item){
+            var last_obj = last_item.values();
+            var new_dist = parseFloat(last_obj.dist) + 5.0;
+            var ct = conv_tempi();
+            var t1 = last_obj.tempo;
+            var res = ct.somma_tempi(t1, def_relative_time);
+            var new_tempo = make_sec_form_withh(res.sec_tot);
+            $("#tbLastTimeValue").html(t1);
+            new_item_default.dist = new_dist;
+            new_item_default.tempo = new_tempo;
+        } else {
+            $("#tbLastTimeValue").html("00:00");
+        }
+        if (!last_item || !$("#dlg_effitem_reltime").val()) {
+            $("#dlg_effitem_reltime").val(def_relative_time);
+        }
+
+        _teorealDataList.add(new_item_default);
         _teorealEditItem = _teorealDataList.get('id', idnew).values();
         _teorealEditItem['is_new'] = true;
 
         teoreal_open_dialog_edititem(_teorealEditItem);
+    }
+
+    // new item dialog, sum the previous time with the user one and put the result into time input
+    run_view.teoreal_sum_relative_to_previoustime = function () {
+        var t1 = $("#tbLastTimeValue").html();
+        var t2 = $("#dlg_effitem_reltime").val();
+        var ct = conv_tempi();
+        var res = ct.somma_tempi(t1, t2);
+        if (res) {
+            var new_tempo = make_sec_form_withh(res.sec_tot);
+            $('#dlg_effitem_tempo').val(new_tempo);
+        }
     }
 
     // new item refesued to be edited, remove it
@@ -585,7 +623,7 @@ $(document).ready(function () {
     run_view.getTranslMessage = function (label, msg_default) {
         if (chrome.i18n !== undefined) {
             var message = chrome.i18n.getMessage(label);
-            console.log("Message i18: ", message);
+            //console.log("Message i18: ", message);
             return message;
         }
         return msg_default;

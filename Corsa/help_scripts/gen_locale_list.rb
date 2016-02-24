@@ -189,7 +189,7 @@ if $0 == __FILE__
   fname = File.dirname(__FILE__) + "/string_list.txt"
   gen = Generator.new
   #gen.run(fname, 'en')
-  gen.create_single('Tempo effettivo', 'it')
+  gen.create_single('Previous Time', 'it')
   
   
 end
