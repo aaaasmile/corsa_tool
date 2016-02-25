@@ -203,6 +203,21 @@ function List(id, options, values) {
         }
     }
 
+    this.get_previous_item = function (valueName, value) {
+        var previous = null;
+        for (var i = 0, il = self.items.length; i < il; i++) {
+            var item = self.items[i];
+            if (item.values()[valueName] === value) {
+                return previous;
+            } else {
+                previous = item;
+            }
+        }
+        return previous;
+    }
+
+    // ISS end
+
     /* Sorts the list.
     * @valueOrEvent Either a JavaScript event object or a valueName
     * @sortFunction (optional) Define if natural sorting does not fullfill your needs

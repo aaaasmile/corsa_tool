@@ -404,10 +404,21 @@ $(document).ready(function () {
     run_view.teoreal_add_new_item = function () {
         var idnew = _teorealDataList.size() + _teoreal_initial_id;
         var last_item = _teorealDataList.get_last();
-        var new_item_default = { id: idnew, dist: 5.0, tempo: '00:24:30' };
+        
+        var new_item_default = prepare_previous_item(last_item, idnew);
+        _teorealDataList.add(new_item_default);
+        _teorealEditItem = _teorealDataList.get('id', idnew).values();
+        _teorealEditItem['is_new'] = true;
+
+        teoreal_open_dialog_edititem(_teorealEditItem);
+    }
+
+    // prepare relative data for the new dialogbox. The prev_item is used to set the accumulated time and the default relative distance
+    var prepare_previous_item = function (prev_item, idItem) {
+        var new_item_default = { id: idItem, dist: 5.0, tempo: '00:24:30' };
         var def_relative_time = "25:30";
-        if(last_item){
-            var last_obj = last_item.values();
+        if (prev_item) {
+            var last_obj = prev_item.values();
             var new_dist = parseFloat(last_obj.dist) + 5.0;
             var ct = conv_tempi();
             var t1 = last_obj.tempo;
@@ -419,16 +430,12 @@ $(document).ready(function () {
         } else {
             $("#tbLastTimeValue").html("00:00");
         }
-        if (!last_item || !$("#dlg_effitem_reltime").val()) {
+        if (!prev_item || !$("#dlg_effitem_reltime").val()) {
             $("#dlg_effitem_reltime").val(def_relative_time);
         }
-
-        _teorealDataList.add(new_item_default);
-        _teorealEditItem = _teorealDataList.get('id', idnew).values();
-        _teorealEditItem['is_new'] = true;
-
-        teoreal_open_dialog_edititem(_teorealEditItem);
+        return new_item_default;
     }
+
 
     // new item dialog, sum the previous time with the user one and put the result into time input
     run_view.teoreal_sum_relative_to_previoustime = function () {
@@ -437,7 +444,7 @@ $(document).ready(function () {
         var ct = conv_tempi();
         var res = ct.somma_tempi(t1, t2);
         if (res) {
-            var new_tempo = make_sec_form_withh(res.sec_tot);
+            var new_tempo = make_sec_form_withh(res.sec_tot, true);
             $('#dlg_effitem_tempo').val(new_tempo);
         }
     }
@@ -487,6 +494,8 @@ $(document).ready(function () {
         editBtns.click(function () {
             var itemId = $(this).closest('tr').find('.id').text();
             var itemValues = _teorealDataList.get('id', itemId).values();
+            var previous_item = _teorealDataList.get_previous_item('id', itemId);
+            prepare_previous_item(previous_item, itemId);
             _teorealEditItem = itemValues;
             teoreal_open_dialog_edititem(itemValues);
 
@@ -645,7 +654,9 @@ $(document).ready(function () {
     }
 
     // restitisce qualcosa di simile a "01:00:02" da 3602. sec deve essere positivo.
-    var make_sec_form_withh = function (sec) {
+    var make_sec_form_withh = function (sec, force_hh) {
+        if (typeof (force_hh) === 'undefined') force_hh = false;
+
         sec = Math.abs(sec);
         var hh = sec / 3600, mm_formatted = "";
         var mm, ss;
@@ -655,7 +666,7 @@ $(document).ready(function () {
         mm = Math.floor(mm);
         ss = sec - (hh * 3600 + mm * 60);
 
-        if (hh >= 1) {
+        if (hh >= 1 || force_hh) {
             mm_formatted = sprintf("%02d:%02d:%02d", hh, mm, ss);
         }
         else {
