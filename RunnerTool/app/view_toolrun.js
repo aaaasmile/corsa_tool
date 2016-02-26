@@ -416,14 +416,14 @@ $(document).ready(function () {
     // prepare relative data for the new dialogbox. The prev_item is used to set the accumulated time and the default relative distance
     var prepare_previous_item = function (prev_item, idItem) {
         var new_item_default = { id: idItem, dist: 5.0, tempo: '00:24:30' };
-        var def_relative_time = "25:30";
+        var def_relative_time = "00:25:30";
         if (prev_item) {
             var last_obj = prev_item.values();
             var new_dist = parseFloat(last_obj.dist) + 5.0;
             var ct = conv_tempi();
             var t1 = last_obj.tempo;
             var res = ct.somma_tempi(t1, def_relative_time);
-            var new_tempo = make_sec_form_withh(res.sec_tot);
+            var new_tempo = make_sec_form_withh(res.sec_tot, true);
             $("#tbLastTimeValue").html(t1);
             new_item_default.dist = new_dist;
             new_item_default.tempo = new_tempo;
